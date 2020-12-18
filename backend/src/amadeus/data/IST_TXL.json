@@ -1,0 +1,90 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT6H55M',
+        segments: [
+          {
+            departure: { iataCode: 'IST', at: '2020-12-10T16:00:00' },
+            arrival: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-10T18:00:00'
+            },
+            carrierCode: 'LH',
+            number: '7045',
+            aircraft: { code: '388' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT4H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-10T19:45:00'
+            },
+            arrival: { iataCode: 'TXL', at: '2020-12-10T20:55:00' },
+            carrierCode: 'LH',
+            number: '4245',
+            aircraft: { code: '744' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT1H10M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '462.48',
+      base: '274.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '462.48',
+      additionalServices: [ { amount: '77.65', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LH' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '462.48', base: '274.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'H03CLSE9',
+            brandedFare: 'CLASSIC',
+            class: 'H',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'H03CLSE9',
+            brandedFare: 'CLASSIC',
+            class: 'H',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

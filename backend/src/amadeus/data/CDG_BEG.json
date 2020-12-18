@@ -1,0 +1,69 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT2H20M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CDG',
+              terminal: '2A',
+              at: '2020-12-10T10:10:00'
+            },
+            arrival: {
+              iataCode: 'BEG',
+              terminal: '2',
+              at: '2020-12-10T12:30:00'
+            },
+            carrierCode: 'JU',
+            number: '311',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'JU' },
+            duration: 'PT2H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '84.10',
+      base: '15.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '84.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'JU' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '84.10', base: '15.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'RNBSPOFR',
+            brandedFare: 'YL',
+            class: 'R',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

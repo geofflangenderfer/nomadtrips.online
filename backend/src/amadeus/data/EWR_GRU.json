@@ -1,0 +1,89 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT14H20M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'EWR',
+              terminal: 'A',
+              at: '2020-12-10T15:50:00'
+            },
+            arrival: { iataCode: 'MCO', at: '2020-12-10T18:49:00' },
+            carrierCode: 'B6',
+            number: '2427',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT2H59M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'MCO', at: '2020-12-10T21:20:00' },
+            arrival: {
+              iataCode: 'GRU',
+              terminal: '3',
+              at: '2020-12-11T08:10:00'
+            },
+            carrierCode: 'LA',
+            number: '631',
+            aircraft: { code: '788' },
+            operating: { carrierCode: 'LA' },
+            duration: 'PT8H50M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '349.60',
+      base: '335.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '349.60'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'LA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '349.60', base: '335.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLESLZ0Y',
+            brandedFare: 'SL',
+            class: 'P',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLESLZ0Y',
+            brandedFare: 'SL',
+            class: 'Q',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

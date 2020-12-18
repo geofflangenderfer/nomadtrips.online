@@ -1,0 +1,61 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT3H30M',
+        segments: [
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T13:20:00' },
+            arrival: { iataCode: 'SAW', at: '2020-12-10T18:50:00' },
+            carrierCode: 'PC',
+            number: '1254',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'PC' },
+            duration: 'PT3H30M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '108.82',
+      base: '30.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '108.82'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'PC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '108.82', base: '30.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'POW1W',
+            brandedFare: 'EUROP',
+            class: 'P',
+            includedCheckedBags: { weight: 20, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

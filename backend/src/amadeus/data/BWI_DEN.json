@@ -1,0 +1,59 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT4H14M',
+        segments: [
+          {
+            departure: { iataCode: 'BWI', at: '2020-12-10T21:35:00' },
+            arrival: { iataCode: 'DEN', at: '2020-12-10T23:49:00' },
+            carrierCode: 'NK',
+            number: '115',
+            aircraft: { code: '32B' },
+            operating: { carrierCode: 'NK' },
+            duration: 'PT4H14M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '258.09',
+      base: '247.99',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '258.09'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'NK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '258.09', base: '247.99' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VC1NR',
+            class: 'V'
+          }
+        ]
+      }
+    ]
+  }
+]

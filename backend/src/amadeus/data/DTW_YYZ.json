@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT7H6M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DTW',
+              terminal: 'N',
+              at: '2020-12-10T06:20:00'
+            },
+            arrival: {
+              iataCode: 'ORD',
+              terminal: '2',
+              at: '2020-12-10T06:34:00'
+            },
+            carrierCode: 'UA',
+            number: '5701',
+            aircraft: { code: 'E7W' },
+            duration: 'PT1H14M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'ORD',
+              terminal: '1',
+              at: '2020-12-10T11:00:00'
+            },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T13:26:00'
+            },
+            carrierCode: 'UA',
+            number: '4618',
+            aircraft: { code: 'CR5' },
+            duration: 'PT1H26M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '300.10',
+      base: '290.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '300.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '300.10', base: '290.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SAA0AKES',
+            class: 'S',
+            sliceDiceIndicator: 'LOCAL_AVAILABILITY',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TNA0A9EN',
+            class: 'T',
+            sliceDiceIndicator: 'LOCAL_AVAILABILITY',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

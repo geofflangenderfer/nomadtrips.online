@@ -1,0 +1,73 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT5H21M',
+        segments: [
+          {
+            departure: { iataCode: 'MIA', at: '2020-12-10T07:22:00' },
+            arrival: {
+              iataCode: 'BOS',
+              terminal: 'B',
+              at: '2020-12-10T12:43:00'
+            },
+            carrierCode: 'UA',
+            number: '1663',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT5H21M',
+            stops: [
+              {
+                iataCode: 'EWR',
+                duration: 'PT1H10M',
+                arrivalAt: '2020-12-10T10:20:00',
+                departureAt: '2020-12-10T11:30:00'
+              }
+            ],
+            id: '1',
+            numberOfStops: 1,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '103.10',
+      base: '93.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '103.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '103.10', base: '93.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KAA0AHES',
+            brandedFare: 'ECONOMY',
+            class: 'K',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

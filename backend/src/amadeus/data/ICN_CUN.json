@@ -1,0 +1,97 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT18H30M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'ICN',
+              terminal: '2',
+              at: '2020-12-10T09:20:00'
+            },
+            arrival: {
+              iataCode: 'DTW',
+              terminal: 'EM',
+              at: '2020-12-10T08:12:00'
+            },
+            carrierCode: 'DL',
+            number: '158',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT12H52M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'DTW',
+              terminal: 'EM',
+              at: '2020-12-10T10:15:00'
+            },
+            arrival: {
+              iataCode: 'CUN',
+              terminal: '4',
+              at: '2020-12-10T13:50:00'
+            },
+            carrierCode: 'DL',
+            number: '578',
+            aircraft: { code: '739' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT3H35M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '680.64',
+      base: '600.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '680.64'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'DL' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '680.64', base: '600.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TLY0WKMA',
+            brandedFare: 'MAINCABIN',
+            class: 'T',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TLY0WKMA',
+            brandedFare: 'MAINCABIN',
+            class: 'T',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

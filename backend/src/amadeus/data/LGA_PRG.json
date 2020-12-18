@@ -1,0 +1,108 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT13H55M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LGA',
+              terminal: 'B',
+              at: '2020-12-10T12:55:00'
+            },
+            arrival: { iataCode: 'YUL', at: '2020-12-10T14:20:00' },
+            carrierCode: 'AC',
+            number: '7637',
+            aircraft: { code: 'E75' },
+            duration: 'PT1H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'YUL', at: '2020-12-10T17:00:00' },
+            arrival: { iataCode: 'ZRH', at: '2020-12-11T06:20:00' },
+            carrierCode: 'AC',
+            number: '6820',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'LX' },
+            duration: 'PT7H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'ZRH', at: '2020-12-11T07:30:00' },
+            arrival: {
+              iataCode: 'PRG',
+              terminal: '2',
+              at: '2020-12-11T08:50:00'
+            },
+            carrierCode: 'AC',
+            number: '6801',
+            aircraft: { code: '223' },
+            operating: { carrierCode: 'LX' },
+            duration: 'PT1H20M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '248.03',
+      base: '1.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '248.03'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '248.03', base: '1.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KND6YLGT',
+            brandedFare: 'BASIC',
+            class: 'K',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KND6YLGT',
+            brandedFare: 'BASIC',
+            class: 'K',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'KND6YLGT',
+            brandedFare: 'BASIC',
+            class: 'K',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

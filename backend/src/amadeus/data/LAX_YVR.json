@@ -1,0 +1,94 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT6H46M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'ONT',
+              terminal: '2',
+              at: '2020-12-10T06:14:00'
+            },
+            arrival: {
+              iataCode: 'SFO',
+              terminal: '3',
+              at: '2020-12-10T07:41:00'
+            },
+            carrierCode: 'UA',
+            number: '5572',
+            aircraft: { code: 'CRJ' },
+            duration: 'PT1H27M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SFO',
+              terminal: '3',
+              at: '2020-12-10T10:46:00'
+            },
+            arrival: {
+              iataCode: 'YVR',
+              terminal: 'M',
+              at: '2020-12-10T13:00:00'
+            },
+            carrierCode: 'UA',
+            number: '2051',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT2H14M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '162.10',
+      base: '152.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '162.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '162.10', base: '152.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LNA0A9EN',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LNA0A9EN',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

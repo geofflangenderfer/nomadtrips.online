@@ -1,0 +1,117 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT38H25M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DXB',
+              terminal: '3',
+              at: '2020-12-10T02:15:00'
+            },
+            arrival: { iataCode: 'ZRH', at: '2020-12-10T06:25:00' },
+            carrierCode: 'UA',
+            number: '9731',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'LX' },
+            duration: 'PT7H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'ZRH', at: '2020-12-10T10:20:00' },
+            arrival: {
+              iataCode: 'EWR',
+              terminal: 'B',
+              at: '2020-12-10T13:40:00'
+            },
+            carrierCode: 'UA',
+            number: '135',
+            aircraft: { code: '763' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT9H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'EWR',
+              terminal: 'C',
+              at: '2020-12-10T22:05:00'
+            },
+            arrival: {
+              iataCode: 'GRU',
+              terminal: '3',
+              at: '2020-12-11T09:40:00'
+            },
+            carrierCode: 'UA',
+            number: '149',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT9H35M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '1057.65',
+      base: '380.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '1057.65'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '1057.65', base: '380.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'WL5RCWLO',
+            brandedFare: 'ECOFLEX',
+            class: 'W',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'WL5RCWLO',
+            brandedFare: 'ECOFLEX',
+            class: 'W',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'WL5RCWLO',
+            brandedFare: 'ECOFLEX',
+            class: 'W',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

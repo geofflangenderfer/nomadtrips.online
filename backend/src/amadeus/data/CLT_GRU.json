@@ -1,0 +1,92 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT15H30M',
+        segments: [
+          {
+            departure: { iataCode: 'CLT', at: '2020-12-10T18:20:00' },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T20:20:00'
+            },
+            carrierCode: 'AC',
+            number: '7585',
+            aircraft: { code: 'E75' },
+            duration: 'PT2H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T23:55:00'
+            },
+            arrival: {
+              iataCode: 'GRU',
+              terminal: '3',
+              at: '2020-12-11T11:50:00'
+            },
+            carrierCode: 'AC',
+            number: '90',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT9H55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '722.10',
+      base: '590.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '722.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '722.10', base: '590.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'G0LXSUO',
+            brandedFare: 'STANDARD',
+            class: 'G',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'G0LXSUO',
+            brandedFare: 'STANDARD',
+            class: 'G',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

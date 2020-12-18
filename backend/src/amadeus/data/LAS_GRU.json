@@ -1,0 +1,96 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT18H10M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LAS',
+              terminal: '3',
+              at: '2020-12-10T06:00:00'
+            },
+            arrival: {
+              iataCode: 'EWR',
+              terminal: 'C',
+              at: '2020-12-10T13:52:00'
+            },
+            carrierCode: 'UA',
+            number: '548',
+            aircraft: { code: '739' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT4H52M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '4',
+              at: '2020-12-10T17:45:00'
+            },
+            arrival: {
+              iataCode: 'GRU',
+              terminal: '3',
+              at: '2020-12-11T05:10:00'
+            },
+            carrierCode: 'LA',
+            number: '8181',
+            aircraft: { code: '773' },
+            duration: 'PT9H25M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '419.60',
+      base: '405.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '419.60'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '419.60', base: '405.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'NEESLZ0W',
+            brandedFare: 'SL',
+            class: 'G',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'NEESLZ0W',
+            brandedFare: 'SL',
+            class: 'N',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

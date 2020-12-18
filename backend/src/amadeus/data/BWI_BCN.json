@@ -1,0 +1,113 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT33H59M',
+        segments: [
+          {
+            departure: { iataCode: 'BWI', at: '2020-12-10T20:16:00' },
+            arrival: {
+              iataCode: 'DTW',
+              terminal: 'EM',
+              at: '2020-12-10T21:54:00'
+            },
+            carrierCode: 'DL',
+            number: '348',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT1H38M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'DTW',
+              terminal: 'EM',
+              at: '2020-12-11T18:50:00'
+            },
+            arrival: { iataCode: 'AMS', at: '2020-12-12T08:25:00' },
+            carrierCode: 'DL',
+            number: '134',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT7H35M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-12T10:05:00' },
+            arrival: {
+              iataCode: 'BCN',
+              terminal: '1',
+              at: '2020-12-12T12:15:00'
+            },
+            carrierCode: 'DL',
+            number: '8207',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT2H10M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '314.58',
+      base: '63.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '314.58'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'DL' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '314.58', base: '63.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VL5X09B1',
+            brandedFare: 'BASICECON',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'VL5X09B1',
+            brandedFare: 'BASICECON',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'VL5X09B1',
+            brandedFare: 'BASICECON',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

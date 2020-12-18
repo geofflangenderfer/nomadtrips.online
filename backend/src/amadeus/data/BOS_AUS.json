@@ -1,0 +1,65 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT4H38M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'BOS',
+              terminal: 'C',
+              at: '2020-12-10T14:50:00'
+            },
+            arrival: { iataCode: 'AUS', at: '2020-12-10T18:28:00' },
+            carrierCode: 'B6',
+            number: '1139',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT4H38M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '184.10',
+      base: '174.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '184.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'B6' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '184.10', base: '174.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'OC0QUEL1',
+            brandedFare: 'DN',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT29H30M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PVG',
+              terminal: '2',
+              at: '2020-12-10T18:15:00'
+            },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T19:00:00'
+            },
+            carrierCode: 'AC',
+            number: '28',
+            aircraft: { code: '77L' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT13H45M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-11T06:00:00'
+            },
+            arrival: {
+              iataCode: 'CUN',
+              terminal: '3',
+              at: '2020-12-11T10:45:00'
+            },
+            carrierCode: 'AC',
+            number: '2498',
+            aircraft: { code: '763' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT4H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '776.90',
+      base: '533.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '776.90'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '776.90', base: '533.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLVC02',
+            brandedFare: 'STANDARD',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'ALYD02TG',
+            brandedFare: 'STANDARD',
+            class: 'A',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

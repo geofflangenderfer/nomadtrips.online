@@ -1,0 +1,90 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT6H25M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'MAD',
+              terminal: '4',
+              at: '2020-12-10T17:15:00'
+            },
+            arrival: { iataCode: 'RIX', at: '2020-12-10T22:15:00' },
+            carrierCode: 'BT',
+            number: '686',
+            aircraft: { code: '223' },
+            operating: { carrierCode: 'BT' },
+            duration: 'PT4H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'RIX', at: '2020-12-10T23:30:00' },
+            arrival: {
+              iataCode: 'LED',
+              terminal: '1',
+              at: '2020-12-11T01:40:00'
+            },
+            carrierCode: 'BT',
+            number: '446',
+            aircraft: { code: '223' },
+            operating: { carrierCode: 'BT' },
+            duration: 'PT1H10M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '159.02',
+      base: '64.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '159.02',
+      additionalServices: [ { amount: '48.53', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'BT' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '159.02', base: '64.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'UES3GRN',
+            brandedFare: 'GREEN',
+            class: 'U',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'UES3GRN',
+            brandedFare: 'GREEN',
+            class: 'U',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

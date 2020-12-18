@@ -1,0 +1,115 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT15H49M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DTW',
+              terminal: 'N',
+              at: '2020-12-10T13:56:00'
+            },
+            arrival: {
+              iataCode: 'BOS',
+              terminal: 'C',
+              at: '2020-12-10T15:43:00'
+            },
+            carrierCode: 'B6',
+            number: '2336',
+            aircraft: { code: 'E90' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT1H47M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'BOS',
+              terminal: 'E',
+              at: '2020-12-10T21:20:00'
+            },
+            arrival: { iataCode: 'PDL', at: '2020-12-11T06:15:00' },
+            carrierCode: 'S4',
+            number: '280',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'S4' },
+            duration: 'PT4H55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'PDL', at: '2020-12-11T07:30:00' },
+            arrival: {
+              iataCode: 'LIS',
+              terminal: '1',
+              at: '2020-12-11T10:45:00'
+            },
+            carrierCode: 'S4',
+            number: '120',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'S4' },
+            duration: 'PT2H15M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '397.23',
+      base: '243.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '397.23',
+      additionalServices: [ { amount: '120.00', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'S4' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '397.23', base: '243.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'UL0AUEY5',
+            class: 'U',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'XS41',
+            class: 'X',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'XS41',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

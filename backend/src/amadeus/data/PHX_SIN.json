@@ -1,0 +1,122 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT30H7M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PHX',
+              terminal: '4',
+              at: '2020-12-10T09:38:00'
+            },
+            arrival: {
+              iataCode: 'LAX',
+              terminal: '0',
+              at: '2020-12-10T09:56:00'
+            },
+            carrierCode: 'JL',
+            number: '7531',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'AA' },
+            duration: 'PT1H18M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'LAX',
+              terminal: 'B',
+              at: '2020-12-10T12:30:00'
+            },
+            arrival: {
+              iataCode: 'HND',
+              terminal: '3',
+              at: '2020-12-11T17:30:00'
+            },
+            carrierCode: 'JL',
+            number: '15',
+            aircraft: { code: '773' },
+            operating: { carrierCode: 'JL' },
+            duration: 'PT12H',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HND',
+              terminal: '3',
+              at: '2020-12-12T00:05:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '1',
+              at: '2020-12-12T06:45:00'
+            },
+            carrierCode: 'JL',
+            number: '35',
+            aircraft: { code: '777' },
+            operating: { carrierCode: 'JL' },
+            duration: 'PT7H40M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '546.98',
+      base: '518.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '546.98'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'JL' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '546.98', base: '518.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KLE09MN2',
+            class: 'K',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KLE09MN2',
+            class: 'K',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'KLE09MN2',
+            class: 'K',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

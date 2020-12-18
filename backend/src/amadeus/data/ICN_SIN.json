@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT30H10M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'ICN',
+              terminal: '1',
+              at: '2020-12-10T10:50:00'
+            },
+            arrival: {
+              iataCode: 'SGN',
+              terminal: '2',
+              at: '2020-12-10T14:20:00'
+            },
+            carrierCode: 'VJ',
+            number: '863',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'VJ' },
+            duration: 'PT5H30M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SGN',
+              terminal: '2',
+              at: '2020-12-11T12:55:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '4',
+              at: '2020-12-11T16:00:00'
+            },
+            carrierCode: 'VJ',
+            number: '813',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'VJ' },
+            duration: 'PT2H5M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '208.59',
+      base: '152.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '208.59'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'HR' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '208.59', base: '152.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'ZSP',
+            class: 'Z',
+            includedCheckedBags: { weight: 20, weightUnit: 'KG' }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'ZSP',
+            class: 'Z',
+            includedCheckedBags: { weight: 20, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

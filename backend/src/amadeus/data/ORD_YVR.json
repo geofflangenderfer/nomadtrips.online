@@ -1,0 +1,88 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 1,
+    itineraries: [
+      {
+        duration: 'PT6H10M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'ORD',
+              terminal: '3',
+              at: '2020-12-10T14:05:00'
+            },
+            arrival: { iataCode: 'SEA', at: '2020-12-10T16:40:00' },
+            carrierCode: 'AS',
+            number: '1013',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'AS' },
+            duration: 'PT4H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'SEA', at: '2020-12-10T17:20:00' },
+            arrival: {
+              iataCode: 'YVR',
+              terminal: 'M',
+              at: '2020-12-10T18:15:00'
+            },
+            carrierCode: 'AS',
+            number: '2314',
+            aircraft: { code: 'E75' },
+            duration: 'PT55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '226.10',
+      base: '216.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '226.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AS' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '226.10', base: '216.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TH0OAJMN',
+            brandedFare: 'MA',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TH0OAJMN',
+            brandedFare: 'MA',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

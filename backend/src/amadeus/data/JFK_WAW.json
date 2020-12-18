@@ -1,0 +1,93 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT12H45M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '8',
+              at: '2020-12-10T23:50:00'
+            },
+            arrival: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-11T14:25:00'
+            },
+            carrierCode: 'AY',
+            number: '16',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'AY' },
+            duration: 'PT7H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-11T17:10:00'
+            },
+            arrival: { iataCode: 'WAW', at: '2020-12-11T18:35:00' },
+            carrierCode: 'AY',
+            number: '1145',
+            aircraft: { code: 'AT7' },
+            duration: 'PT2H25M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '236.78',
+      base: '1.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '236.78',
+      additionalServices: [ { amount: '72.80', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AY' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '236.78', base: '1.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'OLN0T4B5',
+            brandedFare: 'ELIGHT',
+            class: 'O',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'OLN0T4B5',
+            brandedFare: 'ELIGHT',
+            class: 'O',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

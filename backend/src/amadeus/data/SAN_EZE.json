@@ -1,0 +1,97 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT14H45M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'SAN',
+              terminal: '2',
+              at: '2020-12-10T15:35:00'
+            },
+            arrival: {
+              iataCode: 'IAH',
+              terminal: 'C',
+              at: '2020-12-10T20:45:00'
+            },
+            carrierCode: 'UA',
+            number: '2210',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT3H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'IAH',
+              terminal: 'E',
+              at: '2020-12-10T22:20:00'
+            },
+            arrival: {
+              iataCode: 'EZE',
+              terminal: 'A',
+              at: '2020-12-11T11:20:00'
+            },
+            carrierCode: 'UA',
+            number: '819',
+            aircraft: { code: '777' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT10H',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '450.10',
+      base: '440.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '450.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '450.10', base: '440.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LNA0A0ES',
+            brandedFare: 'ECONOMY',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LNA0A0ES',
+            brandedFare: 'ECONOMY',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

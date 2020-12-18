@@ -1,0 +1,90 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT5H53M',
+        segments: [
+          {
+            departure: { iataCode: 'SLC', at: '2020-12-10T12:40:00' },
+            arrival: {
+              iataCode: 'ORD',
+              terminal: '1',
+              at: '2020-12-10T16:47:00'
+            },
+            carrierCode: 'UA',
+            number: '2046',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT3H7M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'ORD',
+              terminal: '2',
+              at: '2020-12-10T17:50:00'
+            },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T20:33:00'
+            },
+            carrierCode: 'UA',
+            number: '5351',
+            aircraft: { code: 'E7W' },
+            duration: 'PT1H43M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '226.10',
+      base: '216.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '226.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '226.10', base: '216.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LNA0A9EN',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LNA0A9EN',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

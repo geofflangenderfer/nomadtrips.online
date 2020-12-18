@@ -1,0 +1,93 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT4H39M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'FLL',
+              terminal: '1',
+              at: '2020-12-10T18:55:00'
+            },
+            arrival: {
+              iataCode: 'IAH',
+              terminal: 'C',
+              at: '2020-12-10T20:30:00'
+            },
+            carrierCode: 'UA',
+            number: '388',
+            aircraft: { code: '739' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT2H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'IAH',
+              terminal: 'C',
+              at: '2020-12-10T21:35:00'
+            },
+            arrival: { iataCode: 'AUS', at: '2020-12-10T22:34:00' },
+            carrierCode: 'UA',
+            number: '1234',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT59M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '125.60',
+      base: '111.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '125.60'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '125.60', base: '111.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LAA0AHES',
+            brandedFare: 'ECONOMY',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LAA0AHES',
+            brandedFare: 'ECONOMY',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

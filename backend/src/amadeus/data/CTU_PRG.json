@@ -1,0 +1,88 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT13H45M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CTU',
+              terminal: '1',
+              at: '2020-12-10T15:30:00'
+            },
+            arrival: { iataCode: 'AMS', at: '2020-12-10T19:20:00' },
+            carrierCode: 'MF',
+            number: '9805',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT10H50M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T20:50:00' },
+            arrival: {
+              iataCode: 'PRG',
+              terminal: '2',
+              at: '2020-12-10T22:15:00'
+            },
+            carrierCode: 'KL',
+            number: '1359',
+            aircraft: { code: '73W' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT1H25M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '818.73',
+      base: '585.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '818.73',
+      additionalServices: [ { amount: '91.00', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'MF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '818.73', base: '585.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TL50BBSC',
+            class: 'T',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TL50BBSC',
+            class: 'K',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

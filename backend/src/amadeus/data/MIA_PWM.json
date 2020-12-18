@@ -1,0 +1,80 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT4H59M',
+        segments: [
+          {
+            departure: { iataCode: 'MIA', at: '2020-12-10T13:45:00' },
+            arrival: { iataCode: 'IAD', at: '2020-12-10T16:20:00' },
+            carrierCode: 'UA',
+            number: '212',
+            aircraft: { code: '73G' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT2H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T17:10:00' },
+            arrival: { iataCode: 'PWM', at: '2020-12-10T18:44:00' },
+            carrierCode: 'UA',
+            number: '4930',
+            aircraft: { code: 'ERJ' },
+            duration: 'PT1H34M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '140.60',
+      base: '126.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '140.60'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '140.60', base: '126.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KAA0AZDS',
+            brandedFare: 'ECONOMY',
+            class: 'K',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KAA0AZDS',
+            brandedFare: 'ECONOMY',
+            class: 'K',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT32H10M',
+        segments: [
+          {
+            departure: { iataCode: 'BKK', at: '2020-12-10T22:50:00' },
+            arrival: {
+              iataCode: 'MNL',
+              terminal: '2',
+              at: '2020-12-11T03:15:00'
+            },
+            carrierCode: 'PR',
+            number: '733',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'PR' },
+            duration: 'PT3H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MNL',
+              terminal: '1',
+              at: '2020-12-11T17:20:00'
+            },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '3',
+              at: '2020-12-11T19:00:00'
+            },
+            carrierCode: 'PR',
+            number: '118',
+            aircraft: { code: '350' },
+            operating: { carrierCode: 'PR' },
+            duration: 'PT14H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '388.16',
+      base: '291.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '388.16'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'PR' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '388.16', base: '291.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TOBTH',
+            class: 'T',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TOBTH',
+            class: 'T',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

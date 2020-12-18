@@ -1,0 +1,59 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT3H28M',
+        segments: [
+          {
+            departure: { iataCode: 'DEN', at: '2020-12-10T10:15:00' },
+            arrival: { iataCode: 'TPA', at: '2020-12-10T15:43:00' },
+            carrierCode: 'F9',
+            number: '290',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'F9' },
+            duration: 'PT3H28M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '223.10',
+      base: '213.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '223.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'F9' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '223.10', base: '213.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'V01PXS5',
+            class: 'V'
+          }
+        ]
+      }
+    ]
+  }
+]

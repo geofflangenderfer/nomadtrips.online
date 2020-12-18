@@ -1,0 +1,117 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT12H45M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PHL',
+              terminal: 'E',
+              at: '2020-12-10T17:05:00'
+            },
+            arrival: {
+              iataCode: 'BOS',
+              terminal: 'C',
+              at: '2020-12-10T18:29:00'
+            },
+            carrierCode: 'FI',
+            number: '7852',
+            aircraft: { code: 'E90' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT1H24M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'BOS',
+              terminal: 'E',
+              at: '2020-12-10T20:00:00'
+            },
+            arrival: { iataCode: 'KEF', at: '2020-12-11T06:05:00' },
+            carrierCode: 'FI',
+            number: '630',
+            aircraft: { code: '76W' },
+            operating: { carrierCode: 'FI' },
+            duration: 'PT5H5M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'KEF', at: '2020-12-11T07:40:00' },
+            arrival: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-11T10:50:00'
+            },
+            carrierCode: 'FI',
+            number: '450',
+            aircraft: { code: '76W' },
+            operating: { carrierCode: 'FI' },
+            duration: 'PT3H10M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '820.35',
+      base: '733.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '820.35'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'FI' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '820.35', base: '733.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VJ1QOAEC',
+            brandedFare: 'STANDARD',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'VJ1QOAEC',
+            brandedFare: 'STANDARD',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'VJ1QOAEC',
+            brandedFare: 'STANDARD',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

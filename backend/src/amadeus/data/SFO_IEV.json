@@ -1,0 +1,97 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT15H25M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'SFO',
+              terminal: 'I',
+              at: '2020-12-10T21:40:00'
+            },
+            arrival: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-11T17:55:00'
+            },
+            carrierCode: 'UA',
+            number: '8882',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT11H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-11T19:50:00'
+            },
+            arrival: {
+              iataCode: 'KBP',
+              terminal: 'D',
+              at: '2020-12-11T23:05:00'
+            },
+            carrierCode: 'LH',
+            number: '2546',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT2H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '796.43',
+      base: '548.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '796.43'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '796.43', base: '548.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLD5ZLGT',
+            brandedFare: 'ECOBASIC',
+            class: 'Q',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLD5ZLGT',
+            brandedFare: 'ECOBASIC',
+            class: 'Q',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

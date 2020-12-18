@@ -1,0 +1,94 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT23H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'BCN',
+              terminal: '1',
+              at: '2020-12-10T13:40:00'
+            },
+            arrival: {
+              iataCode: 'MEX',
+              terminal: '2',
+              at: '2020-12-10T19:45:00'
+            },
+            carrierCode: 'AM',
+            number: '38',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'AM' },
+            duration: 'PT13H5M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MEX',
+              terminal: '2',
+              at: '2020-12-10T23:55:00'
+            },
+            arrival: { iataCode: 'LIM', at: '2020-12-11T06:45:00' },
+            carrierCode: 'AM',
+            number: '48',
+            aircraft: { code: '7S8' },
+            operating: { carrierCode: 'AM' },
+            duration: 'PT5H50M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '277.38',
+      base: '237.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '277.38',
+      additionalServices: [ { amount: '60.67', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AM' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '277.38', base: '237.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'RLNN0TEI',
+            brandedFare: 'BG',
+            class: 'V',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'RLNN0TEI',
+            brandedFare: 'BG',
+            class: 'V',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 6,
+    itineraries: [
+      {
+        duration: 'PT4H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-10T13:15:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '1',
+              at: '2020-12-10T17:20:00'
+            },
+            carrierCode: 'TR',
+            number: '973',
+            aircraft: { code: '32N' },
+            operating: { carrierCode: 'TR' },
+            duration: 'PT4H5M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '155.30',
+      base: '89.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '155.30'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'HR' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '155.30', base: '89.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'N2TR24',
+            class: 'N',
+            includedCheckedBags: { weight: 20, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT1H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CGK',
+              terminal: '2',
+              at: '2020-12-10T09:15:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '1',
+              at: '2020-12-10T12:05:00'
+            },
+            carrierCode: '3K',
+            number: '202',
+            aircraft: { code: '320' },
+            operating: { carrierCode: '3K' },
+            duration: 'PT1H50M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '76.15',
+      base: '51.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '76.15'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'HR' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '76.15', base: '51.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLOW',
+            class: 'H',
+            includedCheckedBags: { weight: 20, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

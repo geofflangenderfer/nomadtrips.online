@@ -1,0 +1,110 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT24H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PHL',
+              terminal: 'A',
+              at: '2020-12-10T20:20:00'
+            },
+            arrival: { iataCode: 'DOH', at: '2020-12-11T16:40:00' },
+            carrierCode: 'MH',
+            number: '9076',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'QR' },
+            duration: 'PT12H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'DOH', at: '2020-12-11T19:40:00' },
+            arrival: {
+              iataCode: 'KUL',
+              terminal: 'M',
+              at: '2020-12-12T08:05:00'
+            },
+            carrierCode: 'MH',
+            number: '9051',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'QR' },
+            duration: 'PT7H25M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'KUL',
+              terminal: 'M',
+              at: '2020-12-12T09:05:00'
+            },
+            arrival: { iataCode: 'PEN', at: '2020-12-12T10:10:00' },
+            carrierCode: 'MH',
+            number: '1138',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'MH' },
+            duration: 'PT1H5M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '752.50',
+      base: '560.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '752.50'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'MH' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '752.50', base: '560.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'NKXBCOXX',
+            class: 'N',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'NKXBCOXX',
+            class: 'N',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'QSTT',
+            class: 'Q',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

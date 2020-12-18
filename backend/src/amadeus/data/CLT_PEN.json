@@ -1,0 +1,114 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT25H25M',
+        segments: [
+          {
+            departure: { iataCode: 'CLT', at: '2020-12-10T18:55:00' },
+            arrival: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-11T09:20:00'
+            },
+            carrierCode: 'UA',
+            number: '9260',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT8H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-11T12:20:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '0',
+              at: '2020-12-12T07:00:00'
+            },
+            carrierCode: 'LH',
+            number: '9790',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'SQ' },
+            duration: 'PT11H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SIN',
+              terminal: '3',
+              at: '2020-12-12T07:50:00'
+            },
+            arrival: { iataCode: 'PEN', at: '2020-12-12T09:20:00' },
+            carrierCode: 'MI',
+            number: '346',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'MI' },
+            duration: 'PT1H30M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '3755.42',
+      base: '3279.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '3755.42'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '3755.42', base: '3279.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'B1RTA',
+            class: 'B',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'B1RTA',
+            class: 'B',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'YIFSQ',
+            class: 'Y',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

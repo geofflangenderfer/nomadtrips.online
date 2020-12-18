@@ -1,0 +1,118 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT34H25M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DXB',
+              terminal: '3',
+              at: '2020-12-10T17:10:00'
+            },
+            arrival: {
+              iataCode: 'ADD',
+              terminal: '2',
+              at: '2020-12-10T20:35:00'
+            },
+            carrierCode: 'ET',
+            number: '603',
+            aircraft: { code: '350' },
+            operating: { carrierCode: 'ET' },
+            duration: 'PT4H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'ADD',
+              terminal: '2',
+              at: '2020-12-10T22:50:00'
+            },
+            arrival: { iataCode: 'IAD', at: '2020-12-11T08:15:00' },
+            carrierCode: 'ET',
+            number: '500',
+            aircraft: { code: '77L' },
+            operating: { carrierCode: 'ET' },
+            duration: 'PT17H25M',
+            stops: [
+              {
+                iataCode: 'DUB',
+                duration: 'PT1H',
+                arrivalAt: '2020-12-11T04:20:00',
+                departureAt: '2020-12-11T05:20:00'
+              }
+            ],
+            id: '2',
+            numberOfStops: 1,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-11T14:40:00' },
+            arrival: { iataCode: 'DEN', at: '2020-12-11T16:35:00' },
+            carrierCode: 'ET',
+            number: '1364',
+            aircraft: { code: '739' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT3H55M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '883.34',
+      base: '539.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '883.34'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'ET' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '883.34', base: '539.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLXOWAE',
+            class: 'H',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLXOWAE',
+            class: 'H',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLXOWAE',
+            class: 'H',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

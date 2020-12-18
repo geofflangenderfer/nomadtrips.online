@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT12H18M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PHX',
+              terminal: '3',
+              at: '2020-12-10T23:59:00'
+            },
+            arrival: {
+              iataCode: 'FLL',
+              terminal: '3',
+              at: '2020-12-11T06:10:00'
+            },
+            carrierCode: 'B6',
+            number: '1158',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT4H11M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'FLL',
+              terminal: '3',
+              at: '2020-12-11T10:52:00'
+            },
+            arrival: { iataCode: 'MDE', at: '2020-12-11T14:17:00' },
+            carrierCode: 'B6',
+            number: '41',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT3H25M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '457.10',
+      base: '432.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '457.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'B6' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '457.10', base: '432.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'UC0PBEY5',
+            brandedFare: 'AN',
+            class: 'U',
+            sliceDiceIndicator: 'LOCAL_AVAILABILITY',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'MH0AUEY5',
+            brandedFare: 'AN',
+            class: 'M',
+            sliceDiceIndicator: 'LOCAL_AVAILABILITY',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

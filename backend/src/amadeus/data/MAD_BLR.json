@@ -1,0 +1,94 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT13H',
+        segments: [
+          {
+            departure: {
+              iataCode: 'MAD',
+              terminal: '2',
+              at: '2020-12-10T06:40:00'
+            },
+            arrival: {
+              iataCode: 'CDG',
+              terminal: '2F',
+              at: '2020-12-10T09:00:00'
+            },
+            carrierCode: 'AF',
+            number: '1401',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'AF' },
+            duration: 'PT2H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'CDG',
+              terminal: '2E',
+              at: '2020-12-10T10:10:00'
+            },
+            arrival: { iataCode: 'BLR', at: '2020-12-11T00:10:00' },
+            carrierCode: 'AF',
+            number: '194',
+            aircraft: { code: '772' },
+            operating: { carrierCode: 'AF' },
+            duration: 'PT9H30M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '612.59',
+      base: '423.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '612.59',
+      additionalServices: [ { amount: '121.33', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '612.59', base: '423.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LL50BDF5',
+            brandedFare: 'FLEX',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LL50BDF5',
+            brandedFare: 'FLEX',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

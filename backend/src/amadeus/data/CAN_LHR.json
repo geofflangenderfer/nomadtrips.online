@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT22H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CAN',
+              terminal: '2',
+              at: '2020-12-10T16:25:00'
+            },
+            arrival: {
+              iataCode: 'HAN',
+              terminal: '2',
+              at: '2020-12-10T17:40:00'
+            },
+            carrierCode: 'VN',
+            number: '507',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'VN' },
+            duration: 'PT2H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HAN',
+              terminal: '2',
+              at: '2020-12-11T01:35:00'
+            },
+            arrival: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-11T07:15:00'
+            },
+            carrierCode: 'VN',
+            number: '55',
+            aircraft: { code: '787' },
+            operating: { carrierCode: 'VN' },
+            duration: 'PT12H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '469.74',
+      base: '321.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '469.74'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'VN' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '469.74', base: '321.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'ROXAN',
+            class: 'R',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'ROXAN',
+            class: 'R',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

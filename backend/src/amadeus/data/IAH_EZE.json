@@ -1,0 +1,109 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT23H34M',
+        segments: [
+          {
+            departure: { iataCode: 'IAH', at: '2020-12-10T14:26:00' },
+            arrival: { iataCode: 'FLL', at: '2020-12-10T17:56:00' },
+            carrierCode: 'AD',
+            number: '7059',
+            aircraft: { code: '739' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT2H30M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'FLL',
+              terminal: '3',
+              at: '2020-12-10T23:00:00'
+            },
+            arrival: { iataCode: 'VCP', at: '2020-12-11T09:45:00' },
+            carrierCode: 'AD',
+            number: '8705',
+            aircraft: { code: '339' },
+            operating: { carrierCode: 'AD' },
+            duration: 'PT8H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'VCP', at: '2020-12-11T14:00:00' },
+            arrival: {
+              iataCode: 'EZE',
+              terminal: 'A',
+              at: '2020-12-11T17:00:00'
+            },
+            carrierCode: 'AD',
+            number: '8770',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'AD' },
+            duration: 'PT3H',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '536.60',
+      base: '522.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '536.60'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AD' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '536.60', base: '522.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'PEECJZ0U',
+            brandedFare: 'MAISAZUL',
+            class: 'N',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'PEECJZ0U',
+            brandedFare: 'MAISAZUL',
+            class: 'P',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'PEECJZ0U',
+            brandedFare: 'MAISAZUL',
+            class: 'P',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

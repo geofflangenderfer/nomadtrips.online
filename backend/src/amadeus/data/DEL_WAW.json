@@ -1,0 +1,66 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT8H',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DEL',
+              terminal: '3',
+              at: '2020-12-10T10:50:00'
+            },
+            arrival: { iataCode: 'WAW', at: '2020-12-10T14:20:00' },
+            carrierCode: 'LO',
+            number: '72',
+            aircraft: { code: '788' },
+            operating: { carrierCode: 'LO' },
+            duration: 'PT8H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '358.55',
+      base: '200.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '358.55',
+      additionalServices: [ { amount: '111.62', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LO' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '358.55', base: '200.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'W1LANIY0',
+            brandedFare: 'ECOSTAND',
+            class: 'W',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

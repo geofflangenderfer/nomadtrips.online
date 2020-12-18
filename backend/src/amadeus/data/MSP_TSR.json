@@ -1,0 +1,120 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT18H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'MSP',
+              terminal: '1',
+              at: '2020-12-10T10:55:00'
+            },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T14:00:00'
+            },
+            carrierCode: 'AC',
+            number: '7734',
+            aircraft: { code: 'E75' },
+            duration: 'PT2H5M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T20:00:00'
+            },
+            arrival: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-11T09:50:00'
+            },
+            carrierCode: 'AC',
+            number: '846',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT7H50M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-11T11:20:00'
+            },
+            arrival: { iataCode: 'TSR', at: '2020-12-11T13:45:00' },
+            carrierCode: 'LH',
+            number: '1656',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT1H25M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '2561.42',
+      base: '2310.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '2561.42'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '2561.42', base: '2310.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KNA0A9TG',
+            brandedFare: 'STANDARD',
+            class: 'K',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'YFFEO',
+            brandedFare: 'STANDARD',
+            class: 'Y',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'YFFEO',
+            brandedFare: 'STANDARD',
+            class: 'Y',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

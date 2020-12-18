@@ -1,0 +1,84 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT4H11M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DTW',
+              terminal: 'N',
+              at: '2020-12-10T19:44:00'
+            },
+            arrival: { iataCode: 'IAD', at: '2020-12-10T21:11:00' },
+            carrierCode: 'UA',
+            number: '6362',
+            aircraft: { code: 'CR7' },
+            duration: 'PT1H27M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T22:00:00' },
+            arrival: { iataCode: 'TPA', at: '2020-12-10T23:55:00' },
+            carrierCode: 'UA',
+            number: '2446',
+            aircraft: { code: '73G' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT1H55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '153.60',
+      base: '139.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '153.60'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '153.60', base: '139.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LAA0AKEN',
+            brandedFare: 'ECONOMY',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LAA0AKEN',
+            brandedFare: 'ECONOMY',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

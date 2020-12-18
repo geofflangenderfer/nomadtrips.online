@@ -1,0 +1,80 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT7H15M',
+        segments: [
+          {
+            departure: { iataCode: 'SEA', at: '2020-12-10T23:34:00' },
+            arrival: { iataCode: 'IAD', at: '2020-12-11T07:23:00' },
+            carrierCode: 'UA',
+            number: '2492',
+            aircraft: { code: '739' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT4H49M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-11T08:15:00' },
+            arrival: { iataCode: 'PWM', at: '2020-12-11T09:49:00' },
+            carrierCode: 'UA',
+            number: '4957',
+            aircraft: { code: 'ERJ' },
+            duration: 'PT1H34M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '322.60',
+      base: '308.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '322.60'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '322.60', base: '308.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'WAA0AKES',
+            brandedFare: 'ECONOMY',
+            class: 'W',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'WAA0AKES',
+            brandedFare: 'ECONOMY',
+            class: 'W',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

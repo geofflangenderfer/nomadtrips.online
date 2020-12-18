@@ -1,0 +1,113 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 1,
+    itineraries: [
+      {
+        duration: 'PT32H16M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LAS',
+              terminal: '3',
+              at: '2020-12-10T11:15:00'
+            },
+            arrival: {
+              iataCode: 'LAX',
+              terminal: '6',
+              at: '2020-12-10T12:30:00'
+            },
+            carrierCode: 'AS',
+            number: '2173',
+            aircraft: { code: 'E75' },
+            duration: 'PT1H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'LAX',
+              terminal: 'B',
+              at: '2020-12-10T22:41:00'
+            },
+            arrival: { iataCode: 'PTY', at: '2020-12-11T08:22:00' },
+            carrierCode: 'CM',
+            number: '303',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'CM' },
+            duration: 'PT6H41M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'PTY', at: '2020-12-11T15:19:00' },
+            arrival: {
+              iataCode: 'EZE',
+              terminal: 'A',
+              at: '2020-12-12T00:31:00'
+            },
+            carrierCode: 'CM',
+            number: '279',
+            aircraft: { code: '739' },
+            operating: { carrierCode: 'CM' },
+            duration: 'PT7H12M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '518.85',
+      base: '503.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '518.85'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'CM' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '518.85', base: '503.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TH0OAVMN',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TAAAOZ1S',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'TAAAOZ1S',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

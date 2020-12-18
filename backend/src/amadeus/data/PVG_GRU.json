@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT28H10M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PVG',
+              terminal: '2',
+              at: '2020-12-10T16:30:00'
+            },
+            arrival: {
+              iataCode: 'EWR',
+              terminal: 'B',
+              at: '2020-12-10T17:55:00'
+            },
+            carrierCode: 'UA',
+            number: '87',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT14H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'EWR',
+              terminal: 'C',
+              at: '2020-12-10T22:05:00'
+            },
+            arrival: {
+              iataCode: 'GRU',
+              terminal: '3',
+              at: '2020-12-11T09:40:00'
+            },
+            carrierCode: 'UA',
+            number: '149',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT9H35M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '815.45',
+      base: '576.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '815.45'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '815.45', base: '576.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VLERXKUV',
+            class: 'V',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'VLERXKUV',
+            class: 'V',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

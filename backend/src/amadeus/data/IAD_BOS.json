@@ -1,0 +1,65 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT1H30M',
+        segments: [
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T22:24:00' },
+            arrival: {
+              iataCode: 'BOS',
+              terminal: 'B',
+              at: '2020-12-10T23:54:00'
+            },
+            carrierCode: 'UA',
+            number: '352',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT1H30M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '148.10',
+      base: '138.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '148.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '148.10', base: '138.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SAA0AKES',
+            brandedFare: 'ECONOMY',
+            class: 'S',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

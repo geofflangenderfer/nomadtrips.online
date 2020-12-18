@@ -1,0 +1,83 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT6H55M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'BCN',
+              terminal: '2',
+              at: '2020-12-10T14:50:00'
+            },
+            arrival: { iataCode: 'LPA', at: '2020-12-10T17:10:00' },
+            carrierCode: 'NT',
+            number: '5131',
+            aircraft: { code: '295' },
+            operating: { carrierCode: 'NT' },
+            duration: 'PT3H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'LPA', at: '2020-12-10T19:55:00' },
+            arrival: { iataCode: 'SPC', at: '2020-12-10T20:45:00' },
+            carrierCode: 'NT',
+            number: '317',
+            aircraft: { code: 'AT7' },
+            operating: { carrierCode: 'NT' },
+            duration: 'PT50M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '120.93',
+      base: '97.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '120.93'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'NT' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '120.93', base: '97.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'QJLOPI',
+            class: 'Q',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QJLOPI',
+            class: 'O',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

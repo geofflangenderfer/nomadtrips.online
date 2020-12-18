@@ -1,0 +1,86 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT34H',
+        segments: [
+          {
+            departure: { iataCode: 'IST', at: '2020-12-10T18:50:00' },
+            arrival: { iataCode: 'WAW', at: '2020-12-10T19:30:00' },
+            carrierCode: 'LO',
+            number: '136',
+            aircraft: { code: 'E95' },
+            operating: { carrierCode: 'LO' },
+            duration: 'PT2H40M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'WAW', at: '2020-12-11T17:05:00' },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-11T20:50:00'
+            },
+            carrierCode: 'LO',
+            number: '45',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'LO' },
+            duration: 'PT9H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '327.27',
+      base: '113.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '327.27',
+      additionalServices: [ { amount: '111.62', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LO' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '327.27', base: '113.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'L1LANEY0',
+            brandedFare: 'ECOSTAND',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'L1LANEY0',
+            brandedFare: 'ECOSTAND',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

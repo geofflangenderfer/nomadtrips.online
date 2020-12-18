@@ -1,0 +1,93 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT38H23M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'FLL',
+              terminal: '1',
+              at: '2020-12-10T20:37:00'
+            },
+            arrival: {
+              iataCode: 'EWR',
+              terminal: 'C',
+              at: '2020-12-10T23:41:00'
+            },
+            carrierCode: 'UA',
+            number: '2336',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT3H4M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'EWR',
+              terminal: 'C',
+              at: '2020-12-11T20:30:00'
+            },
+            arrival: { iataCode: 'CPT', at: '2020-12-12T18:00:00' },
+            carrierCode: 'UA',
+            number: '1122',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT14H30M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '764.70',
+      base: '530.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '764.70'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '764.70', base: '530.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'QH700RCE',
+            brandedFare: 'ECOFLEX',
+            class: 'Q',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QH700RCE',
+            brandedFare: 'ECOFLEX',
+            class: 'Q',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

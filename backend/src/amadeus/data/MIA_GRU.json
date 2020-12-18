@@ -1,0 +1,83 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT15H55M',
+        segments: [
+          {
+            departure: { iataCode: 'MIA', at: '2020-12-10T22:00:00' },
+            arrival: { iataCode: 'VVI', at: '2020-12-11T06:00:00' },
+            carrierCode: 'OB',
+            number: '767',
+            aircraft: { code: '763' },
+            operating: { carrierCode: 'OB' },
+            duration: 'PT7H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'VVI', at: '2020-12-11T12:10:00' },
+            arrival: {
+              iataCode: 'GRU',
+              terminal: '3',
+              at: '2020-12-11T15:55:00'
+            },
+            carrierCode: 'Z8',
+            number: '430',
+            aircraft: { code: 'E90' },
+            operating: { carrierCode: 'Z8' },
+            duration: 'PT2H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '555.10',
+      base: '545.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '555.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'OB' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '555.10', base: '545.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'GEEOB',
+            class: 'G',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'EEELLEEU',
+            class: 'E',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

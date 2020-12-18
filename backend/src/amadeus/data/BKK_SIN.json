@@ -1,0 +1,91 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT7H5M',
+        segments: [
+          {
+            departure: { iataCode: 'BKK', at: '2020-12-10T11:20:00' },
+            arrival: {
+              iataCode: 'SGN',
+              terminal: '2',
+              at: '2020-12-10T13:10:00'
+            },
+            carrierCode: 'VN',
+            number: '600',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'VN' },
+            duration: 'PT1H50M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SGN',
+              terminal: '2',
+              at: '2020-12-10T16:10:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '4',
+              at: '2020-12-10T19:25:00'
+            },
+            carrierCode: 'VN',
+            number: '657',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'VN' },
+            duration: 'PT2H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '115.70',
+      base: '31.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '115.70'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'VN' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '115.70', base: '31.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'POXAS',
+            class: 'P',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'POXVN',
+            class: 'P',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

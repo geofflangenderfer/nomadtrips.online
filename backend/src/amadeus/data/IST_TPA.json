@@ -1,0 +1,89 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT16H40M',
+        segments: [
+          {
+            departure: { iataCode: 'IST', at: '2020-12-10T07:05:00' },
+            arrival: {
+              iataCode: 'FRA',
+              terminal: '1',
+              at: '2020-12-10T08:25:00'
+            },
+            carrierCode: 'UA',
+            number: '9127',
+            aircraft: { code: '32A' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT3H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'FRA',
+              terminal: '1',
+              at: '2020-12-10T11:00:00'
+            },
+            arrival: { iataCode: 'TPA', at: '2020-12-10T15:45:00' },
+            carrierCode: 'UA',
+            number: '9066',
+            aircraft: { code: '343' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT10H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '561.10',
+      base: '355.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '561.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '561.10', base: '355.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VLRCTROW',
+            brandedFare: 'ECOFLEX',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'VLRCTROW',
+            brandedFare: 'ECOFLEX',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

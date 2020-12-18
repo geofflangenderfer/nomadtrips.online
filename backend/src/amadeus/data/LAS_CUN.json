@@ -1,0 +1,98 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT9H10M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LAS',
+              terminal: '3',
+              at: '2020-12-10T12:45:00'
+            },
+            arrival: {
+              iataCode: 'MEX',
+              terminal: '2',
+              at: '2020-12-10T18:40:00'
+            },
+            carrierCode: 'AM',
+            number: '481',
+            aircraft: { code: '7S8' },
+            operating: { carrierCode: 'AM' },
+            duration: 'PT3H55M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MEX',
+              terminal: '2',
+              at: '2020-12-10T21:30:00'
+            },
+            arrival: {
+              iataCode: 'CUN',
+              terminal: '4',
+              at: '2020-12-11T00:55:00'
+            },
+            carrierCode: 'AM',
+            number: '562',
+            aircraft: { code: '737' },
+            operating: { carrierCode: 'AM' },
+            duration: 'PT2H25M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '218.10',
+      base: '180.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '218.10',
+      additionalServices: [ { amount: '36.40', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AM' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '218.10', base: '180.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TNXA0NBH',
+            brandedFare: 'BG',
+            class: 'V',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TNXA0NBH',
+            brandedFare: 'BG',
+            class: 'V',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

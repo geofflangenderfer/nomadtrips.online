@@ -1,0 +1,115 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT14H33M',
+        segments: [
+          {
+            departure: { iataCode: 'SEA', at: '2020-12-10T14:30:00' },
+            arrival: {
+              iataCode: 'LAX',
+              terminal: '6',
+              at: '2020-12-10T17:15:00'
+            },
+            carrierCode: 'AS',
+            number: '1386',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'AS' },
+            duration: 'PT2H45M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'LAX',
+              terminal: '3',
+              at: '2020-12-10T19:05:00'
+            },
+            arrival: {
+              iataCode: 'BOG',
+              terminal: '1',
+              at: '2020-12-11T05:15:00'
+            },
+            carrierCode: 'AV',
+            number: '89',
+            aircraft: { code: '330' },
+            duration: 'PT7H10M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'BOG',
+              terminal: '1',
+              at: '2020-12-11T07:00:00'
+            },
+            arrival: { iataCode: 'MDE', at: '2020-12-11T08:03:00' },
+            carrierCode: 'AV',
+            number: '8450',
+            aircraft: { code: '320' },
+            duration: 'PT1H3M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '574.81',
+      base: '545.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '574.81'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AV' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '574.81', base: '545.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LEOB2BRS',
+            brandedFare: 'M',
+            class: 'K',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LEOB2BRS',
+            brandedFare: 'M',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'LEOB2BRS',
+            brandedFare: 'M',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

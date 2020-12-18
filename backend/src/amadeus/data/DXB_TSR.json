@@ -1,0 +1,83 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT11H20M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DXB',
+              terminal: '3',
+              at: '2020-12-10T09:45:00'
+            },
+            arrival: { iataCode: 'OTP', at: '2020-12-10T13:20:00' },
+            carrierCode: 'FZ',
+            number: '1797',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'FZ' },
+            duration: 'PT5H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'OTP', at: '2020-12-10T18:05:00' },
+            arrival: { iataCode: 'TSR', at: '2020-12-10T19:05:00' },
+            carrierCode: 'RO',
+            number: '607',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'RO' },
+            duration: 'PT1H',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '366.09',
+      base: '289.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '366.09'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'HR' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '366.09', base: '289.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TOW2AE1',
+            class: 'T',
+            includedCheckedBags: { weight: 30, weightUnit: 'KG' }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'AOWOPTRO',
+            class: 'A',
+            includedCheckedBags: { weight: 30, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

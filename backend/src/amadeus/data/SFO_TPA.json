@@ -1,0 +1,93 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT10H6M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'SFO',
+              terminal: '1',
+              at: '2020-12-10T06:09:00'
+            },
+            arrival: {
+              iataCode: 'JFK',
+              terminal: '5',
+              at: '2020-12-10T14:36:00'
+            },
+            carrierCode: 'B6',
+            number: '16',
+            aircraft: { code: '32S' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT5H27M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '5',
+              at: '2020-12-10T16:05:00'
+            },
+            arrival: { iataCode: 'TPA', at: '2020-12-10T19:15:00' },
+            carrierCode: 'B6',
+            number: '125',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT3H10M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '274.60',
+      base: '260.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '274.60'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'B6' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '274.60', base: '260.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'MC0ABEL1',
+            brandedFare: 'DN',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'PL0QBEL1',
+            brandedFare: 'DN',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

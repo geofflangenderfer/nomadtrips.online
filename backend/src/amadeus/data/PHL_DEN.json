@@ -1,0 +1,63 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT4H33M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PHL',
+              terminal: 'E',
+              at: '2020-12-10T08:20:00'
+            },
+            arrival: { iataCode: 'DEN', at: '2020-12-10T10:53:00' },
+            carrierCode: 'F9',
+            number: '171',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'F9' },
+            duration: 'PT4H33M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '303.10',
+      base: '293.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '303.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'F9' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '303.10', base: '293.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'Y00PXS5',
+            class: 'Y'
+          }
+        ]
+      }
+    ]
+  }
+]

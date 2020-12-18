@@ -1,0 +1,91 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT9H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'HND',
+              terminal: '3',
+              at: '2020-12-10T10:10:00'
+            },
+            arrival: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-10T14:20:00'
+            },
+            carrierCode: 'CX',
+            number: '543',
+            aircraft: { code: '773' },
+            operating: { carrierCode: 'CX' },
+            duration: 'PT5H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-10T15:15:00'
+            },
+            arrival: { iataCode: 'PEN', at: '2020-12-10T19:00:00' },
+            carrierCode: 'CX',
+            number: '637',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'CX' },
+            duration: 'PT3H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '627.10',
+      base: '576.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '627.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'CX' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '627.10', base: '576.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KRZZJFHO',
+            class: 'K',
+            includedCheckedBags: { weight: 30, weightUnit: 'KG' }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KRZZJFHO',
+            class: 'K',
+            includedCheckedBags: { weight: 30, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

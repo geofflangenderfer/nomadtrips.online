@@ -1,0 +1,94 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT16H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'BOS',
+              terminal: 'E',
+              at: '2020-12-10T22:25:00'
+            },
+            arrival: {
+              iataCode: 'BCN',
+              terminal: '1',
+              at: '2020-12-11T11:30:00'
+            },
+            carrierCode: 'IB',
+            number: '2626',
+            aircraft: { code: '332' },
+            duration: 'PT7H5M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'BCN',
+              terminal: '1',
+              at: '2020-12-11T19:15:00'
+            },
+            arrival: {
+              iataCode: 'LIS',
+              terminal: '1',
+              at: '2020-12-11T20:15:00'
+            },
+            carrierCode: 'IB',
+            number: '5375',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'VY' },
+            duration: 'PT2H',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '295.81',
+      base: '272.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '295.81'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'IB' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '295.81', base: '272.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'ONLN0BGN',
+            class: 'O',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'AOWNVY',
+            class: 'A',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

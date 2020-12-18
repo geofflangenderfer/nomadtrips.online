@@ -1,0 +1,100 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT34H54M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PVG',
+              terminal: '2',
+              at: '2020-12-10T22:30:00'
+            },
+            arrival: {
+              iataCode: 'YVR',
+              terminal: 'M',
+              at: '2020-12-10T19:35:00'
+            },
+            carrierCode: 'AC',
+            number: '26',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT13H5M',
+            stops: [
+              {
+                iataCode: 'ICN',
+                duration: 'PT1H15M',
+                arrivalAt: '2020-12-11T01:30:00',
+                departureAt: '2020-12-11T02:45:00'
+              }
+            ],
+            id: '1',
+            numberOfStops: 1,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'YVR',
+              terminal: 'M',
+              at: '2020-12-11T14:45:00'
+            },
+            arrival: { iataCode: 'DEN', at: '2020-12-11T18:24:00' },
+            carrierCode: 'AC',
+            number: '8110',
+            aircraft: { code: 'CR9' },
+            duration: 'PT2H39M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '814.35',
+      base: '585.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '814.35'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '814.35', base: '585.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLVC02',
+            brandedFare: 'STANDARD',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QNA0A0TG',
+            brandedFare: 'STANDARD',
+            class: 'Q',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

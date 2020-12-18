@@ -1,0 +1,107 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT51H17M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'IAH',
+              terminal: 'A',
+              at: '2020-12-10T17:50:00'
+            },
+            arrival: { iataCode: 'MCO', at: '2020-12-10T21:00:00' },
+            carrierCode: 'NK',
+            number: '830',
+            aircraft: { code: '32A' },
+            operating: { carrierCode: 'NK' },
+            duration: 'PT2H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'MCO', at: '2020-12-11T19:27:00' },
+            arrival: {
+              iataCode: 'FLL',
+              terminal: '4',
+              at: '2020-12-11T20:33:00'
+            },
+            carrierCode: 'NK',
+            number: '195',
+            aircraft: { code: '32N' },
+            operating: { carrierCode: 'NK' },
+            duration: 'PT1H6M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'FLL',
+              terminal: '4',
+              at: '2020-12-12T16:17:00'
+            },
+            arrival: { iataCode: 'LIM', at: '2020-12-12T22:07:00' },
+            carrierCode: 'NK',
+            number: '977',
+            aircraft: { code: '32N' },
+            operating: { carrierCode: 'NK' },
+            duration: 'PT5H50M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '503.80',
+      base: '463.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '503.80'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'NK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '503.80', base: '463.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'RNR',
+            class: 'R'
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KNR',
+            class: 'K'
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'KNR',
+            class: 'K'
+          }
+        ]
+      }
+    ]
+  }
+]

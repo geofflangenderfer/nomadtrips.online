@@ -1,0 +1,124 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT18H56M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'BOS',
+              terminal: 'C',
+              at: '2020-12-10T19:21:00'
+            },
+            arrival: {
+              iataCode: 'ORD',
+              terminal: '2',
+              at: '2020-12-10T21:14:00'
+            },
+            carrierCode: 'B6',
+            number: '1011',
+            aircraft: { code: 'E90' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT2H53M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'ORD',
+              terminal: '2',
+              at: '2020-12-11T05:55:00'
+            },
+            arrival: {
+              iataCode: 'FLL',
+              terminal: '3',
+              at: '2020-12-11T09:59:00'
+            },
+            carrierCode: 'B6',
+            number: '563',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT3H4M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'FLL',
+              terminal: '3',
+              at: '2020-12-11T10:52:00'
+            },
+            arrival: { iataCode: 'MDE', at: '2020-12-11T14:17:00' },
+            carrierCode: 'B6',
+            number: '41',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT3H25M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '423.70',
+      base: '393.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '423.70'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'B6' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '423.70', base: '393.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'PL0QBEY5',
+            brandedFare: 'AN',
+            class: 'P',
+            sliceDiceIndicator: 'SUB_OD_AVAILABILITY_1',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'PL0QDEY5',
+            brandedFare: 'AN',
+            class: 'P',
+            sliceDiceIndicator: 'SUB_OD_AVAILABILITY_1',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'MH0AUEY5',
+            brandedFare: 'AN',
+            class: 'M',
+            sliceDiceIndicator: 'LOCAL_AVAILABILITY',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

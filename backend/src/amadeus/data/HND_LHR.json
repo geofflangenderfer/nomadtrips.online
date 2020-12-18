@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT31H20M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'HND',
+              terminal: '0',
+              at: '2020-12-10T19:30:00'
+            },
+            arrival: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-10T22:35:00'
+            },
+            carrierCode: 'CA',
+            number: '168',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'CA' },
+            duration: 'PT4H5M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-11T14:30:00'
+            },
+            arrival: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-11T17:50:00'
+            },
+            carrierCode: 'CA',
+            number: '937',
+            aircraft: { code: '773' },
+            operating: { carrierCode: 'CA' },
+            duration: 'PT11H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '562.00',
+      base: '403.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '562.00'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'CA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '562.00', base: '403.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLORCJP6',
+            class: 'Q',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLORCJP6',
+            class: 'Q',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

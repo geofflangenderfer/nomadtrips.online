@@ -1,0 +1,110 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT26H40M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DEL',
+              terminal: '3',
+              at: '2020-12-10T13:20:00'
+            },
+            arrival: {
+              iataCode: 'FRA',
+              terminal: '1',
+              at: '2020-12-10T18:15:00'
+            },
+            carrierCode: 'AI',
+            number: '121',
+            aircraft: { code: '788' },
+            operating: { carrierCode: 'AI' },
+            duration: 'PT9H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'FRA',
+              terminal: '1',
+              at: '2020-12-10T20:50:00'
+            },
+            arrival: { iataCode: 'ZRH', at: '2020-12-10T21:50:00' },
+            carrierCode: 'LH',
+            number: '5778',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'LX' },
+            duration: 'PT1H',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'ZRH', at: '2020-12-11T06:55:00' },
+            arrival: { iataCode: 'TFS', at: '2020-12-11T10:30:00' },
+            carrierCode: 'LX',
+            number: '8214',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'WK' },
+            duration: 'PT4H35M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '3552.03',
+      base: '2948.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '3552.03'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LH' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '3552.03', base: '2948.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'YIFOW',
+            class: 'Y',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'YFF77WW',
+            class: 'Y',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'YFF77WW',
+            class: 'Y',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT24H17M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DXB',
+              terminal: '3',
+              at: '2020-12-10T01:55:00'
+            },
+            arrival: { iataCode: 'AMS', at: '2020-12-10T06:25:00' },
+            carrierCode: 'KL',
+            number: '428',
+            aircraft: { code: '781' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT7H30M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T09:35:00' },
+            arrival: {
+              iataCode: 'ATL',
+              terminal: 'I',
+              at: '2020-12-10T13:15:00'
+            },
+            carrierCode: 'KL',
+            number: '623',
+            aircraft: { code: '781' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT9H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'ATL',
+              terminal: 'S',
+              at: '2020-12-10T14:42:00'
+            },
+            arrival: { iataCode: 'AUS', at: '2020-12-10T16:12:00' },
+            carrierCode: 'KL',
+            number: '6868',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT2H30M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '1117.63',
+      base: '787.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '1117.63'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '1117.63', base: '787.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LL50BBR0',
+            brandedFare: 'LIGHTBAG2',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LL50BBR0',
+            brandedFare: 'LIGHTBAG2',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'LL50BBR0',
+            brandedFare: 'LIGHTBAG2',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

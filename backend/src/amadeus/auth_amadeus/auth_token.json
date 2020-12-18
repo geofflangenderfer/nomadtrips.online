@@ -1,0 +1,13 @@
+
+        {
+            "type": "amadeusOAuth2Token",
+            "username": "geoff.langenderfer@gmail.com",
+            "application_name": "nomadTripsOnline",
+            "client_id": "M5m0SbU7QA4lzpwxewk8eH4RVAkyBzaP",
+            "token_type": "Bearer",
+            "access_token": "DXGOymIGsCxsUjIsFn4fQxWeGC3F",
+            "expires_in": 1799,
+            "state": "approved",
+            "scope": ""
+        }
+        

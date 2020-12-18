@@ -1,0 +1,93 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT25H',
+        segments: [
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '7',
+              at: '2020-12-10T16:55:00'
+            },
+            arrival: { iataCode: 'HND', at: '2020-12-11T21:10:00' },
+            carrierCode: 'UA',
+            number: '7909',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'NH' },
+            duration: 'PT14H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HND',
+              terminal: '3',
+              at: '2020-12-12T00:30:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '1',
+              at: '2020-12-12T06:55:00'
+            },
+            carrierCode: 'UA',
+            number: '7991',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'NH' },
+            duration: 'PT7H25M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '508.58',
+      base: '486.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '508.58'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '508.58', base: '486.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LHX0XSOL',
+            brandedFare: 'ECONOMY',
+            class: 'L',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LHX0XSOL',
+            brandedFare: 'ECONOMY',
+            class: 'L',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

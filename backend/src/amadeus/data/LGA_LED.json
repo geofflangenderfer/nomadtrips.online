@@ -1,0 +1,108 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT15H42M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LGA',
+              terminal: 'B',
+              at: '2020-12-10T14:48:00'
+            },
+            arrival: { iataCode: 'IAD', at: '2020-12-10T16:20:00' },
+            carrierCode: 'UA',
+            number: '6158',
+            aircraft: { code: 'CR7' },
+            duration: 'PT1H32M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T17:55:00' },
+            arrival: { iataCode: 'ZRH', at: '2020-12-11T07:55:00' },
+            carrierCode: 'UA',
+            number: '52',
+            aircraft: { code: '763' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT8H',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'ZRH', at: '2020-12-11T09:25:00' },
+            arrival: {
+              iataCode: 'LED',
+              terminal: '1',
+              at: '2020-12-11T14:30:00'
+            },
+            carrierCode: 'UA',
+            number: '9754',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'LX' },
+            duration: 'PT3H5M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '389.14',
+      base: '125.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '389.14'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '389.14', base: '125.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LLE00LGT',
+            brandedFare: 'ECOBASIC',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LLE00LGT',
+            brandedFare: 'ECOBASIC',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'LLE00LGT',
+            brandedFare: 'ECOBASIC',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

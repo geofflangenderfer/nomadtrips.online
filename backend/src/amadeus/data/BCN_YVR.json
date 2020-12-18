@@ -1,0 +1,125 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT31H41M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'BCN',
+              terminal: '1',
+              at: '2020-12-10T10:50:00'
+            },
+            arrival: {
+              iataCode: 'LIS',
+              terminal: '1',
+              at: '2020-12-10T11:45:00'
+            },
+            carrierCode: 'TP',
+            number: '1043',
+            aircraft: { code: '32N' },
+            operating: { carrierCode: 'TP' },
+            duration: 'PT1H55M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'LIS',
+              terminal: '1',
+              at: '2020-12-10T16:55:00'
+            },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T20:30:00'
+            },
+            carrierCode: 'TP',
+            number: '259',
+            aircraft: { code: '339' },
+            operating: { carrierCode: 'TP' },
+            duration: 'PT8H35M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'YYZ',
+              terminal: '3',
+              at: '2020-12-11T07:00:00'
+            },
+            arrival: {
+              iataCode: 'YVR',
+              terminal: 'M',
+              at: '2020-12-11T09:31:00'
+            },
+            carrierCode: 'WS',
+            number: '701',
+            aircraft: { code: '73W' },
+            operating: { carrierCode: 'WS' },
+            duration: 'PT5H31M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '618.64',
+      base: '528.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '618.64'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'TP' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '618.64', base: '528.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'UESBSI0C',
+            brandedFare: 'BASIC',
+            class: 'U',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'UESBSI0C',
+            brandedFare: 'BASIC',
+            class: 'U',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'UESBSI0C',
+            brandedFare: 'BASIC',
+            class: 'K',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

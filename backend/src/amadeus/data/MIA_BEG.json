@@ -1,0 +1,105 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT18H30M',
+        segments: [
+          {
+            departure: { iataCode: 'MIA', at: '2020-12-10T13:45:00' },
+            arrival: { iataCode: 'IAD', at: '2020-12-10T16:20:00' },
+            carrierCode: 'UA',
+            number: '212',
+            aircraft: { code: '73G' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT2H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T18:05:00' },
+            arrival: { iataCode: 'VIE', at: '2020-12-11T08:45:00' },
+            carrierCode: 'UA',
+            number: '9822',
+            aircraft: { code: '76W' },
+            operating: { carrierCode: 'OS' },
+            duration: 'PT8H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'VIE', at: '2020-12-11T13:10:00' },
+            arrival: {
+              iataCode: 'BEG',
+              terminal: '2',
+              at: '2020-12-11T14:15:00'
+            },
+            carrierCode: 'UA',
+            number: '9826',
+            aircraft: { code: 'E95' },
+            operating: { carrierCode: 'OS' },
+            duration: 'PT1H5M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '948.92',
+      base: '687.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '948.92'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '948.92', base: '687.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLD5ZLGT',
+            brandedFare: 'ECOBASIC',
+            class: 'H',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLD5ZLGT',
+            brandedFare: 'ECOBASIC',
+            class: 'H',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLD5ZLGT',
+            brandedFare: 'ECOBASIC',
+            class: 'H',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

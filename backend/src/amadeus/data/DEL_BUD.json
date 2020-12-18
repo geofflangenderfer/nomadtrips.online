@@ -1,0 +1,90 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT10H55M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DEL',
+              terminal: '3',
+              at: '2020-12-10T10:50:00'
+            },
+            arrival: { iataCode: 'WAW', at: '2020-12-10T14:20:00' },
+            carrierCode: 'LO',
+            number: '72',
+            aircraft: { code: '788' },
+            operating: { carrierCode: 'LO' },
+            duration: 'PT8H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'WAW', at: '2020-12-10T15:50:00' },
+            arrival: {
+              iataCode: 'BUD',
+              terminal: '2A',
+              at: '2020-12-10T17:15:00'
+            },
+            carrierCode: 'LO',
+            number: '537',
+            aircraft: { code: 'E70' },
+            operating: { carrierCode: 'LO' },
+            duration: 'PT1H25M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '431.75',
+      base: '254.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '431.75',
+      additionalServices: [ { amount: '111.62', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LO' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '431.75', base: '254.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'S1ANIY0',
+            brandedFare: 'ECOSTAND',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'S1ANIY0',
+            brandedFare: 'ECOSTAND',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

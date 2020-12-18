@@ -1,0 +1,122 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT15H',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CAN',
+              terminal: '1',
+              at: '2020-12-10T10:30:00'
+            },
+            arrival: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-10T13:35:00'
+            },
+            carrierCode: 'CA',
+            number: '1330',
+            aircraft: { code: '747' },
+            operating: { carrierCode: 'CA' },
+            duration: 'PT3H5M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-10T16:00:00'
+            },
+            arrival: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-10T12:55:00'
+            },
+            carrierCode: 'LH',
+            number: '4573',
+            aircraft: { code: '346' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT3H55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-10T17:00:00'
+            },
+            arrival: { iataCode: 'TXL', at: '2020-12-10T18:30:00' },
+            carrierCode: 'LH',
+            number: '7116',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT1H30M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '695.76',
+      base: '417.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '695.76',
+      additionalServices: [ { amount: '242.66', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LH' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '695.76', base: '417.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLNCOCBB',
+            brandedFare: 'ECOSTAND',
+            class: 'B',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLNCOCBB',
+            brandedFare: 'ECOSTAND',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLNCOCBB',
+            brandedFare: 'ECOSTAND',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

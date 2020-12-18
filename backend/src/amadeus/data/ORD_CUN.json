@@ -1,0 +1,67 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT3H56M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'ORD',
+              terminal: '3',
+              at: '2020-12-10T06:00:00'
+            },
+            arrival: {
+              iataCode: 'CUN',
+              terminal: '3',
+              at: '2020-12-10T10:56:00'
+            },
+            carrierCode: 'NK',
+            number: '104',
+            aircraft: { code: '32B' },
+            operating: { carrierCode: 'NK' },
+            duration: 'PT3H56M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '115.10',
+      base: '77.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '115.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'NK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '115.10', base: '77.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'RNR',
+            class: 'R'
+          }
+        ]
+      }
+    ]
+  }
+]

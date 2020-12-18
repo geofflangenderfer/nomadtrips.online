@@ -1,0 +1,121 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT37H20M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-10T20:00:00'
+            },
+            arrival: {
+              iataCode: 'AUH',
+              terminal: '3',
+              at: '2020-12-11T07:00:00'
+            },
+            carrierCode: 'EY',
+            number: '26',
+            aircraft: { code: '388' },
+            operating: { carrierCode: 'EY' },
+            duration: 'PT7H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'AUH',
+              terminal: '3',
+              at: '2020-12-11T23:00:00'
+            },
+            arrival: {
+              iataCode: 'KUL',
+              terminal: 'M',
+              at: '2020-12-12T10:00:00'
+            },
+            carrierCode: 'EY',
+            number: '418',
+            aircraft: { code: '781' },
+            operating: { carrierCode: 'EY' },
+            duration: 'PT7H',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'KUL',
+              terminal: 'M',
+              at: '2020-12-12T16:25:00'
+            },
+            arrival: { iataCode: 'PEN', at: '2020-12-12T17:20:00' },
+            carrierCode: 'EY',
+            number: '2761',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'MH' },
+            duration: 'PT55M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '575.92',
+      base: '356.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '575.92'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'EY' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '575.92', base: '356.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'EPROWGB',
+            brandedFare: 'ECODEAL',
+            class: 'E',
+            includedCheckedBags: { weight: 23, weightUnit: 'KG' }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'EPROWGB',
+            brandedFare: 'ECODEAL',
+            class: 'E',
+            includedCheckedBags: { weight: 23, weightUnit: 'KG' }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'EPROWGB',
+            brandedFare: 'ECODEAL',
+            class: 'E',
+            includedCheckedBags: { weight: 23, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

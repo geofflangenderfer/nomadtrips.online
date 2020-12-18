@@ -1,0 +1,70 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT2H10M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CDG',
+              terminal: '2F',
+              at: '2020-12-10T09:15:00'
+            },
+            arrival: {
+              iataCode: 'BUD',
+              terminal: '2A',
+              at: '2020-12-10T11:25:00'
+            },
+            carrierCode: 'AF',
+            number: '1394',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'AF' },
+            duration: 'PT2H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '132.51',
+      base: '79.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '132.51',
+      additionalServices: [ { amount: '54.60', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '132.51', base: '79.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'GS50BALG',
+            brandedFare: 'LIGHT1',
+            class: 'G',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

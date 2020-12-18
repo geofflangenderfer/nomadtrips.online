@@ -1,0 +1,98 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT13H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-10T12:25:00'
+            },
+            arrival: {
+              iataCode: 'LIS',
+              terminal: '1',
+              at: '2020-12-10T15:10:00'
+            },
+            carrierCode: 'TP',
+            number: '1367',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'TP' },
+            duration: 'PT2H45M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'LIS',
+              terminal: '1',
+              at: '2020-12-10T16:55:00'
+            },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T20:30:00'
+            },
+            carrierCode: 'TP',
+            number: '259',
+            aircraft: { code: '339' },
+            operating: { carrierCode: 'TP' },
+            duration: 'PT8H35M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '286.40',
+      base: '82.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '286.40',
+      additionalServices: [ { amount: '115.26', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'TP' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '286.40', base: '82.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TUKDSI0C',
+            brandedFare: 'DISCOUNT',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TUKDSI0C',
+            brandedFare: 'DISCOUNT',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT8H10M',
+        segments: [
+          {
+            departure: { iataCode: 'MIA', at: '2020-12-10T17:45:00' },
+            arrival: { iataCode: 'SAL', at: '2020-12-10T19:35:00' },
+            carrierCode: 'AV',
+            number: '311',
+            aircraft: { code: '319' },
+            duration: 'PT2H50M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'SAL', at: '2020-12-10T20:40:00' },
+            arrival: { iataCode: 'LIM', at: '2020-12-11T01:55:00' },
+            carrierCode: 'AV',
+            number: '427',
+            aircraft: { code: '320' },
+            duration: 'PT4H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '430.10',
+      base: '405.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '430.10',
+      additionalServices: [ { amount: '39.99', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AV' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '430.10', base: '405.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'EEOB2BRS',
+            brandedFare: 'M',
+            class: 'E',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'EEOB2BRS',
+            brandedFare: 'M',
+            class: 'E',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

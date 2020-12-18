@@ -1,0 +1,89 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT11H30M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '4',
+              at: '2020-12-10T21:10:00'
+            },
+            arrival: { iataCode: 'ZRH', at: '2020-12-11T10:50:00' },
+            carrierCode: 'UA',
+            number: '9715',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'LX' },
+            duration: 'PT7H40M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'ZRH', at: '2020-12-11T12:00:00' },
+            arrival: {
+              iataCode: 'KBP',
+              terminal: 'D',
+              at: '2020-12-11T15:40:00'
+            },
+            carrierCode: 'LX',
+            number: '2290',
+            aircraft: { code: '223' },
+            operating: { carrierCode: 'LX' },
+            duration: 'PT2H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '711.03',
+      base: '464.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '711.03'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '711.03', base: '464.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLO00LGT',
+            brandedFare: 'ECOBASIC',
+            class: 'Q',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLO00LGT',
+            brandedFare: 'ECOBASIC',
+            class: 'Q',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

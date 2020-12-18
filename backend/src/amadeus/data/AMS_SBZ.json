@@ -1,0 +1,82 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT4H10M',
+        segments: [
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T10:10:00' },
+            arrival: { iataCode: 'VIE', at: '2020-12-10T12:00:00' },
+            carrierCode: 'OS',
+            number: '372',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'OS' },
+            duration: 'PT1H50M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'VIE', at: '2020-12-10T12:50:00' },
+            arrival: { iataCode: 'SBZ', at: '2020-12-10T15:20:00' },
+            carrierCode: 'OS',
+            number: '785',
+            aircraft: { code: 'E95' },
+            operating: { carrierCode: 'OS' },
+            duration: 'PT1H30M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '610.22',
+      base: '448.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '610.22',
+      additionalServices: [ { amount: '77.65', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'OS' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '610.22', base: '448.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'V07CLSE9',
+            brandedFare: 'CLASSIC',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'V07CLSE9',
+            brandedFare: 'CLASSIC',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

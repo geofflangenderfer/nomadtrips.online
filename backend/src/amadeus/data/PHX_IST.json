@@ -1,0 +1,91 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT15H45M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PHX',
+              terminal: '3',
+              at: '2020-12-10T15:15:00'
+            },
+            arrival: {
+              iataCode: 'ORD',
+              terminal: '1',
+              at: '2020-12-10T19:37:00'
+            },
+            carrierCode: 'UA',
+            number: '2370',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT3H22M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'ORD',
+              terminal: '5',
+              at: '2020-12-10T21:15:00'
+            },
+            arrival: { iataCode: 'IST', at: '2020-12-11T17:00:00' },
+            carrierCode: 'TK',
+            number: '6',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'TK' },
+            duration: 'PT10H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '1209.10',
+      base: '1063.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '1209.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'TK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '1209.10', base: '1063.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'MLY3XOX',
+            class: 'G',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'MLY3XOX',
+            class: 'M',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

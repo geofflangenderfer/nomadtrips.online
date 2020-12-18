@@ -1,0 +1,126 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT53H25M',
+        segments: [
+          {
+            departure: { iataCode: 'SZX', at: '2020-12-10T18:50:00' },
+            arrival: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-10T23:50:00'
+            },
+            carrierCode: 'ZH',
+            number: '9111',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'ZH' },
+            duration: 'PT5H',
+            stops: [
+              {
+                iataCode: 'YIC',
+                duration: 'PT50M',
+                arrivalAt: '2020-12-10T20:30:00',
+                departureAt: '2020-12-10T21:20:00'
+              }
+            ],
+            id: '1',
+            numberOfStops: 1,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-11T14:05:00'
+            },
+            arrival: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-11T17:25:00'
+            },
+            carrierCode: 'LH',
+            number: '723',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT10H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MUC',
+              terminal: '2',
+              at: '2020-12-12T15:35:00'
+            },
+            arrival: { iataCode: 'SBZ', at: '2020-12-12T18:15:00' },
+            carrierCode: 'LH',
+            number: '1662',
+            aircraft: { code: 'CR9' },
+            operating: { carrierCode: 'CL' },
+            duration: 'PT1H40M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '781.20',
+      base: '502.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '781.20',
+      additionalServices: [ { amount: '242.66', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LH' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '781.20', base: '502.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLNCOCBB',
+            brandedFare: 'ECOSTAND',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLNCOCBB',
+            brandedFare: 'ECOSTAND',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLNCOCBB',
+            brandedFare: 'ECOSTAND',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

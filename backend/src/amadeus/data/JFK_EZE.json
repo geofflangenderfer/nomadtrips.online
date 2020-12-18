@@ -1,0 +1,96 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT13H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '4',
+              at: '2020-12-10T14:35:00'
+            },
+            arrival: {
+              iataCode: 'BOG',
+              terminal: '1',
+              at: '2020-12-10T20:10:00'
+            },
+            carrierCode: 'AV',
+            number: '211',
+            aircraft: { code: '788' },
+            duration: 'PT5H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'BOG',
+              terminal: '1',
+              at: '2020-12-10T21:20:00'
+            },
+            arrival: {
+              iataCode: 'EZE',
+              terminal: 'A',
+              at: '2020-12-11T05:40:00'
+            },
+            carrierCode: 'AV',
+            number: '87',
+            aircraft: { code: '330' },
+            duration: 'PT6H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '632.10',
+      base: '622.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '632.10',
+      additionalServices: [ { amount: '39.99', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AV' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '632.10', base: '622.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VEOB2BRS',
+            brandedFare: 'M',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'VEOB2BRS',
+            brandedFare: 'M',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

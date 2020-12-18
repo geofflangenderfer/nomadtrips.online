@@ -1,0 +1,98 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT18H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'SIN',
+              terminal: '1',
+              at: '2020-12-10T23:45:00'
+            },
+            arrival: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-11T06:00:00'
+            },
+            carrierCode: 'AY',
+            number: '132',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'AY' },
+            duration: 'PT12H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-11T09:30:00'
+            },
+            arrival: {
+              iataCode: 'BUD',
+              terminal: '2B',
+              at: '2020-12-11T10:50:00'
+            },
+            carrierCode: 'AY',
+            number: '1251',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'AY' },
+            duration: 'PT2H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '565.84',
+      base: '349.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '565.84',
+      additionalServices: [ { amount: '84.93', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AY' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '565.84', base: '349.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'NNN0S9CM',
+            brandedFare: 'ECLASSIC',
+            class: 'N',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'NNN0S9CM',
+            brandedFare: 'ECLASSIC',
+            class: 'N',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

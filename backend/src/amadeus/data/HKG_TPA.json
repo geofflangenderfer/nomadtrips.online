@@ -1,0 +1,91 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT31H55M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-10T12:20:00'
+            },
+            arrival: {
+              iataCode: 'SFO',
+              terminal: 'I',
+              at: '2020-12-10T08:40:00'
+            },
+            carrierCode: 'UA',
+            number: '862',
+            aircraft: { code: '777' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT12H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SFO',
+              terminal: '3',
+              at: '2020-12-10T23:10:00'
+            },
+            arrival: { iataCode: 'TPA', at: '2020-12-11T07:15:00' },
+            carrierCode: 'UA',
+            number: '2201',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT5H5M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '429.12',
+      base: '364.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '429.12'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '429.12', base: '364.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KLXRCJAO',
+            class: 'K',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KLXRCJAO',
+            class: 'K',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

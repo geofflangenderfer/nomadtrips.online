@@ -1,0 +1,84 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT5H10M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'BCN',
+              terminal: '1',
+              at: '2020-12-10T11:30:00'
+            },
+            arrival: { iataCode: 'OTP', at: '2020-12-10T15:35:00' },
+            carrierCode: 'RO',
+            number: '422',
+            aircraft: { code: '73W' },
+            operating: { carrierCode: 'RO' },
+            duration: 'PT3H5M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'OTP', at: '2020-12-10T16:25:00' },
+            arrival: { iataCode: 'IST', at: '2020-12-10T18:40:00' },
+            carrierCode: 'RO',
+            number: '263',
+            aircraft: { code: '318' },
+            operating: { carrierCode: 'RO' },
+            duration: 'PT1H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '158.05',
+      base: '112.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '158.05',
+      additionalServices: [ { amount: '78.87', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'RO' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '158.05', base: '112.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'EOWSVRES',
+            class: 'E',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'SL1SVRTR',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

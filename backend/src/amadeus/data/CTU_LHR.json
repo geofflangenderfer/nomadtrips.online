@@ -1,0 +1,88 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT13H20M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CTU',
+              terminal: '1',
+              at: '2020-12-10T15:30:00'
+            },
+            arrival: { iataCode: 'AMS', at: '2020-12-10T19:20:00' },
+            carrierCode: 'MF',
+            number: '9805',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT10H50M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T20:35:00' },
+            arrival: {
+              iataCode: 'LHR',
+              terminal: '4',
+              at: '2020-12-10T20:50:00'
+            },
+            carrierCode: 'MF',
+            number: '9655',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT1H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '419.96',
+      base: '202.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '419.96',
+      additionalServices: [ { amount: '91.00', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'MF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '419.96', base: '202.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'T1PRWCN',
+            class: 'T',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'T1PRWCN',
+            class: 'T',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

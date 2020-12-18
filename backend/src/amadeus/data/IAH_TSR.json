@@ -1,0 +1,105 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT19H35M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'IAH',
+              terminal: 'D',
+              at: '2020-12-10T15:30:00'
+            },
+            arrival: { iataCode: 'AMS', at: '2020-12-11T07:40:00' },
+            carrierCode: 'KL',
+            number: '662',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT9H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-11T09:25:00' },
+            arrival: { iataCode: 'OTP', at: '2020-12-11T13:10:00' },
+            carrierCode: 'KL',
+            number: '1373',
+            aircraft: { code: '73W' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT2H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'OTP', at: '2020-12-11T18:05:00' },
+            arrival: { iataCode: 'TSR', at: '2020-12-11T19:05:00' },
+            carrierCode: 'KL',
+            number: '2706',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'RO' },
+            duration: 'PT1H',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '1176.93',
+      base: '832.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '1176.93'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '1176.93', base: '832.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'HL6X09M1',
+            brandedFare: 'STANDARD',
+            class: 'H',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'HL6X09M1',
+            brandedFare: 'STANDARD',
+            class: 'K',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'HL6X09M1',
+            brandedFare: 'STANDARD',
+            class: 'K',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

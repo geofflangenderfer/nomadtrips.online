@@ -1,0 +1,130 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT41H25M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CGK',
+              terminal: '3',
+              at: '2020-12-10T21:45:00'
+            },
+            arrival: {
+              iataCode: 'ADD',
+              terminal: '2',
+              at: '2020-12-11T05:35:00'
+            },
+            carrierCode: 'ET',
+            number: '629',
+            aircraft: { code: '787' },
+            operating: { carrierCode: 'ET' },
+            duration: 'PT11H50M',
+            stops: [
+              {
+                iataCode: 'SIN',
+                duration: 'PT1H',
+                arrivalAt: '2020-12-11T00:25:00',
+                departureAt: '2020-12-11T01:25:00'
+              }
+            ],
+            id: '1',
+            numberOfStops: 1,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'ADD',
+              terminal: '2',
+              at: '2020-12-11T22:50:00'
+            },
+            arrival: {
+              iataCode: 'FCO',
+              terminal: '3',
+              at: '2020-12-12T03:15:00'
+            },
+            carrierCode: 'ET',
+            number: '702',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'ET' },
+            duration: 'PT6H25M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'FCO',
+              terminal: '3',
+              at: '2020-12-12T06:05:00'
+            },
+            arrival: {
+              iataCode: 'LIS',
+              terminal: '1',
+              at: '2020-12-12T08:10:00'
+            },
+            carrierCode: 'ET',
+            number: '1744',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'TP' },
+            duration: 'PT3H5M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '612.65',
+      base: '354.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '612.65'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'ET' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '612.65', base: '354.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLOWID',
+            class: 'H',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLOWID',
+            class: 'H',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLOWID',
+            class: 'H',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

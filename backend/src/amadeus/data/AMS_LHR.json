@@ -1,0 +1,66 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT1H15M',
+        segments: [
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T20:35:00' },
+            arrival: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-10T20:50:00'
+            },
+            carrierCode: 'KL',
+            number: '1033',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT1H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '101.59',
+      base: '52.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '101.59',
+      additionalServices: [ { amount: '54.60', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '101.59', base: '52.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TS50BBLG',
+            brandedFare: 'LIGHT2',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT13H30M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-10T16:30:00'
+            },
+            arrival: {
+              iataCode: 'FRA',
+              terminal: '1',
+              at: '2020-12-10T19:05:00'
+            },
+            carrierCode: 'LH',
+            number: '911',
+            aircraft: { code: '32N' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT1H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'FRA',
+              terminal: '1',
+              at: '2020-12-10T22:05:00'
+            },
+            arrival: {
+              iataCode: 'EZE',
+              terminal: 'A',
+              at: '2020-12-11T03:00:00'
+            },
+            carrierCode: 'LH',
+            number: '5006',
+            aircraft: { code: '74H' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT8H55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '485.80',
+      base: '175.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '485.80',
+      additionalServices: [ { amount: '242.66', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LH' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '485.80', base: '175.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KFFPOWGB',
+            brandedFare: 'ECOFLEX',
+            class: 'K',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KFFPOWGB',
+            brandedFare: 'ECOFLEX',
+            class: 'K',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

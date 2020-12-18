@@ -1,0 +1,88 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT32H40M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'FRA',
+              terminal: '1',
+              at: '2020-12-10T10:05:00'
+            },
+            arrival: { iataCode: 'YUL', at: '2020-12-10T12:25:00' },
+            carrierCode: 'AC',
+            number: '875',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT8H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'YUL', at: '2020-12-11T08:00:00' },
+            arrival: {
+              iataCode: 'CUN',
+              terminal: '3',
+              at: '2020-12-11T12:45:00'
+            },
+            carrierCode: 'AC',
+            number: '1882',
+            aircraft: { code: '321' },
+            duration: 'PT4H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '2533.80',
+      base: '2236.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '2533.80'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '2533.80', base: '2236.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'YFFDEOWW',
+            brandedFare: 'LATITUDE',
+            class: 'Y',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'YFFDEOWW',
+            brandedFare: 'LATITUDE',
+            class: 'Y',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

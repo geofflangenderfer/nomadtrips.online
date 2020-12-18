@@ -1,0 +1,80 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT4H8M',
+        segments: [
+          {
+            departure: { iataCode: 'CLT', at: '2020-12-10T19:47:00' },
+            arrival: { iataCode: 'IAD', at: '2020-12-10T21:12:00' },
+            carrierCode: 'UA',
+            number: '6022',
+            aircraft: { code: 'CR7' },
+            duration: 'PT1H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T22:00:00' },
+            arrival: { iataCode: 'TPA', at: '2020-12-10T23:55:00' },
+            carrierCode: 'UA',
+            number: '2446',
+            aircraft: { code: '73G' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT1H55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '171.10',
+      base: '158.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '171.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '171.10', base: '158.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TAA0AKES',
+            brandedFare: 'ECONOMY',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TAA0AKES',
+            brandedFare: 'ECONOMY',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

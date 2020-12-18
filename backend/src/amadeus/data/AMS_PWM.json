@@ -1,0 +1,105 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT35H52M',
+        segments: [
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T15:15:00' },
+            arrival: { iataCode: 'DOH', at: '2020-12-10T23:40:00' },
+            carrierCode: 'QR',
+            number: '274',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'QR' },
+            duration: 'PT6H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'DOH', at: '2020-12-11T07:50:00' },
+            arrival: {
+              iataCode: 'PHL',
+              terminal: 'A',
+              at: '2020-12-11T13:10:00'
+            },
+            carrierCode: 'QR',
+            number: '727',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'QR' },
+            duration: 'PT13H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'PHL',
+              terminal: 'F',
+              at: '2020-12-11T19:20:00'
+            },
+            arrival: { iataCode: 'PWM', at: '2020-12-11T21:07:00' },
+            carrierCode: 'QR',
+            number: '9478',
+            aircraft: { code: 'ER4' },
+            duration: 'PT1H47M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '1172.62',
+      base: '893.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '1172.62'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'QR' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '1172.62', base: '893.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLR7R1SO',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLR7R1SO',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLR7R1SO',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

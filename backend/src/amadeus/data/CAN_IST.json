@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT25H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CAN',
+              terminal: '2',
+              at: '2020-12-10T09:30:00'
+            },
+            arrival: {
+              iataCode: 'ICN',
+              terminal: '1',
+              at: '2020-12-10T14:05:00'
+            },
+            carrierCode: 'CZ',
+            number: '3061',
+            aircraft: { code: '380' },
+            operating: { carrierCode: 'CZ' },
+            duration: 'PT3H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'ICN',
+              terminal: '1',
+              at: '2020-12-11T00:25:00'
+            },
+            arrival: {
+              iataCode: 'IST',
+              terminal: 'I',
+              at: '2020-12-11T06:20:00'
+            },
+            carrierCode: 'OZ',
+            number: '6931',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'TK' },
+            duration: 'PT11H55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '1589.75',
+      base: '1507.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '1589.75'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'CZ' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '1589.75', base: '1507.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'B2LFFSQK',
+            class: 'B',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'ELXOKP',
+            class: 'E',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

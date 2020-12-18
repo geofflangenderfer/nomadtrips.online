@@ -1,0 +1,118 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT30H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'HND',
+              terminal: '3',
+              at: '2020-12-10T14:55:00'
+            },
+            arrival: { iataCode: 'VVO', at: '2020-12-10T18:30:00' },
+            carrierCode: 'S7',
+            number: '6290',
+            aircraft: { code: '32N' },
+            operating: { carrierCode: 'S7' },
+            duration: 'PT2H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'VVO', at: '2020-12-11T08:55:00' },
+            arrival: {
+              iataCode: 'OVB',
+              terminal: 'A',
+              at: '2020-12-11T12:10:00'
+            },
+            carrierCode: 'S7',
+            number: '5204',
+            aircraft: { code: '32Q' },
+            operating: { carrierCode: 'S7' },
+            duration: 'PT6H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'OVB',
+              terminal: 'A',
+              at: '2020-12-11T14:00:00'
+            },
+            arrival: {
+              iataCode: 'LED',
+              terminal: '1',
+              at: '2020-12-11T15:00:00'
+            },
+            carrierCode: 'S7',
+            number: '180',
+            aircraft: { code: '32N' },
+            operating: { carrierCode: 'S7' },
+            duration: 'PT5H',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '479.90',
+      base: '335.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '479.90',
+      additionalServices: [ { amount: '84.93', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'S7' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '479.90', base: '335.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TBSVVO',
+            brandedFare: 'YBASIC',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TBSVVO',
+            brandedFare: 'YBASIC',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'WBSOW',
+            brandedFare: 'YBASIC',
+            class: 'W',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

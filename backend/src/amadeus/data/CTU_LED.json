@@ -1,0 +1,120 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT30H',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CTU',
+              terminal: '2',
+              at: '2020-12-10T18:00:00'
+            },
+            arrival: { iataCode: 'PKX', at: '2020-12-10T20:45:00' },
+            carrierCode: 'CA',
+            number: '4029',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'CA' },
+            duration: 'PT2H45M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-11T11:35:00'
+            },
+            arrival: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-11T14:10:00'
+            },
+            carrierCode: 'AY',
+            number: '86',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'AY' },
+            duration: 'PT8H35M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-11T16:50:00'
+            },
+            arrival: {
+              iataCode: 'LED',
+              terminal: '1',
+              at: '2020-12-11T19:00:00'
+            },
+            carrierCode: 'AY',
+            number: '705',
+            aircraft: { code: 'AT7' },
+            duration: 'PT1H10M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '725.93',
+      base: '455.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '725.93'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AY' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '725.93', base: '455.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLN0S9CM',
+            brandedFare: 'ECLASSIC',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLN0S9CM',
+            brandedFare: 'ECLASSIC',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLN0S9CM',
+            brandedFare: 'ECLASSIC',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

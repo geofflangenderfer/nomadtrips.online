@@ -1,0 +1,117 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT32H',
+        segments: [
+          {
+            departure: { iataCode: 'MIA', at: '2020-12-10T21:20:00' },
+            arrival: {
+              iataCode: 'LHR',
+              terminal: '5',
+              at: '2020-12-11T10:40:00'
+            },
+            carrierCode: 'IB',
+            number: '7398',
+            aircraft: { code: '777' },
+            operating: { carrierCode: 'BA' },
+            duration: 'PT8H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'LHR',
+              terminal: '5',
+              at: '2020-12-11T15:50:00'
+            },
+            arrival: {
+              iataCode: 'MAD',
+              terminal: '4',
+              at: '2020-12-11T19:20:00'
+            },
+            carrierCode: 'IB',
+            number: '3177',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'IB' },
+            duration: 'PT2H30M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MAD',
+              terminal: '4',
+              at: '2020-12-12T08:15:00'
+            },
+            arrival: { iataCode: 'SPC', at: '2020-12-12T10:20:00' },
+            carrierCode: 'IB',
+            number: '3844',
+            aircraft: { code: '32A' },
+            operating: { carrierCode: 'I2' },
+            duration: 'PT3H5M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '600.05',
+      base: '327.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '600.05'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'IB' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '600.05', base: '327.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'NLW0F4B5',
+            brandedFare: 'NOBAG',
+            class: 'N',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'NLW0F4B5',
+            brandedFare: 'NOBAG',
+            class: 'N',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'NLW0F4B5',
+            brandedFare: 'NOBAG',
+            class: 'N',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

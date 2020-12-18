@@ -1,0 +1,68 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT8H40M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '4',
+              at: '2020-12-10T14:40:00'
+            },
+            arrival: {
+              iataCode: 'BEG',
+              terminal: '2',
+              at: '2020-12-11T05:20:00'
+            },
+            carrierCode: 'JU',
+            number: '501',
+            aircraft: { code: '332' },
+            operating: { carrierCode: 'JU' },
+            duration: 'PT8H40M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '481.37',
+      base: '256.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '481.37'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'JU' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '481.37', base: '256.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'UL00OWUS',
+            class: 'U',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

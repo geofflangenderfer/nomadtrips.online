@@ -1,0 +1,121 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT34H40M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DEL',
+              terminal: '3',
+              at: '2020-12-10T23:45:00'
+            },
+            arrival: {
+              iataCode: 'EWR',
+              terminal: 'C',
+              at: '2020-12-11T04:35:00'
+            },
+            carrierCode: 'UA',
+            number: '83',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT15H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'EWR',
+              terminal: 'C',
+              at: '2020-12-11T07:45:00'
+            },
+            arrival: {
+              iataCode: 'IAH',
+              terminal: 'C',
+              at: '2020-12-11T10:53:00'
+            },
+            carrierCode: 'UA',
+            number: '225',
+            aircraft: { code: '739' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT4H8M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'IAH',
+              terminal: 'E',
+              at: '2020-12-11T16:25:00'
+            },
+            arrival: { iataCode: 'LIM', at: '2020-12-11T23:55:00' },
+            carrierCode: 'UA',
+            number: '854',
+            aircraft: { code: '763' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT6H30M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '898.87',
+      base: '508.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '898.87'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '898.87', base: '508.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SNY00RCW',
+            brandedFare: 'ECOFLEX',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'SNY00RCW',
+            brandedFare: 'ECOFLEX',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'SNY00RCW',
+            brandedFare: 'ECOFLEX',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

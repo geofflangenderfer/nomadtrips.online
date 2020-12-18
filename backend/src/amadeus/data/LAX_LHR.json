@@ -1,0 +1,60 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT9H15M',
+        segments: [
+          {
+            departure: { iataCode: 'LAX', at: '2020-12-10T18:20:00' },
+            arrival: { iataCode: 'LHR', at: '2020-12-11T11:35:00' },
+            carrierCode: '6X',
+            number: '278',
+            aircraft: { code: '777' },
+            operating: { carrierCode: '6X' },
+            duration: 'PT9H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '255.60',
+      base: '250.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '255.60'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ '6X' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '255.60', base: '250.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'YROBSON',
+            class: 'Y',
+            includedCheckedBags: { quantity: 8 }
+          }
+        ]
+      }
+    ]
+  }
+]

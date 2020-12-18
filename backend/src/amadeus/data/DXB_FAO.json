@@ -1,0 +1,114 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT18H',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DXB',
+              terminal: '3',
+              at: '2020-12-10T02:15:00'
+            },
+            arrival: { iataCode: 'ZRH', at: '2020-12-10T06:25:00' },
+            carrierCode: 'LX',
+            number: '243',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'LX' },
+            duration: 'PT7H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'ZRH', at: '2020-12-10T11:45:00' },
+            arrival: {
+              iataCode: 'LIS',
+              terminal: '1',
+              at: '2020-12-10T13:40:00'
+            },
+            carrierCode: 'LX',
+            number: '2084',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'LX' },
+            duration: 'PT2H55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'LIS',
+              terminal: '1',
+              at: '2020-12-10T15:30:00'
+            },
+            arrival: { iataCode: 'FAO', at: '2020-12-10T16:15:00' },
+            carrierCode: 'TP',
+            number: '1909',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'TP' },
+            duration: 'PT45M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '611.44',
+      base: '389.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '611.44',
+      additionalServices: [ { amount: '145.60', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LX' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '611.44', base: '389.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VRCOWAE',
+            brandedFare: 'ECOSTAND',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'VRCOWAE',
+            brandedFare: 'ECOSTAND',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'VRCOWAE',
+            brandedFare: 'ECOSTAND',
+            class: 'W',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

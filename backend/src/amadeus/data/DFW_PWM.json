@@ -1,0 +1,83 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT5H9M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DFW',
+              terminal: 'E',
+              at: '2020-12-10T12:35:00'
+            },
+            arrival: { iataCode: 'IAD', at: '2020-12-10T16:20:00' },
+            carrierCode: 'UA',
+            number: '6046',
+            aircraft: { code: 'E7W' },
+            duration: 'PT2H45M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T17:10:00' },
+            arrival: { iataCode: 'PWM', at: '2020-12-10T18:44:00' },
+            carrierCode: 'UA',
+            number: '4930',
+            aircraft: { code: 'ERJ' },
+            duration: 'PT1H34M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '123.60',
+      base: '109.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '123.60'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '123.60', base: '109.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KAA0PFEN',
+            brandedFare: 'ECONOMY',
+            class: 'K',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KAA0PFEN',
+            brandedFare: 'ECONOMY',
+            class: 'K',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

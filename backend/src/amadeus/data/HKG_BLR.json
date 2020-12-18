@@ -1,0 +1,83 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT7H30M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-10T18:55:00'
+            },
+            arrival: { iataCode: 'BKK', at: '2020-12-10T20:40:00' },
+            carrierCode: 'TG',
+            number: '639',
+            aircraft: { code: '330' },
+            operating: { carrierCode: 'TG' },
+            duration: 'PT2H45M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'BKK', at: '2020-12-10T21:35:00' },
+            arrival: { iataCode: 'BLR', at: '2020-12-10T23:55:00' },
+            carrierCode: 'TG',
+            number: '325',
+            aircraft: { code: '777' },
+            operating: { carrierCode: 'TG' },
+            duration: 'PT3H50M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '524.03',
+      base: '462.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '524.03'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'TG' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '524.03', base: '462.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'Q1LEOTG',
+            class: 'Q',
+            includedCheckedBags: { weight: 30, weightUnit: 'KG' }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'Q1LEOTG',
+            class: 'Q',
+            includedCheckedBags: { weight: 30, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT25H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'HND',
+              terminal: '2',
+              at: '2020-12-10T06:20:00'
+            },
+            arrival: { iataCode: 'ITM', at: '2020-12-10T07:30:00' },
+            carrierCode: 'NH',
+            number: '985',
+            aircraft: { code: '767' },
+            operating: { carrierCode: 'NH' },
+            duration: 'PT1H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'KIX',
+              terminal: '1',
+              at: '2020-12-10T11:05:00'
+            },
+            arrival: { iataCode: 'AMS', at: '2020-12-10T15:15:00' },
+            carrierCode: 'KL',
+            number: '868',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT12H10M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T21:10:00' },
+            arrival: {
+              iataCode: 'LIS',
+              terminal: '1',
+              at: '2020-12-10T23:10:00'
+            },
+            carrierCode: 'KL',
+            number: '1697',
+            aircraft: { code: '73W' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT3H',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '1629.85',
+      base: '1516.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '1629.85'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '1629.85', base: '1516.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'HL50BMSO',
+            brandedFare: 'STANDARD',
+            class: 'K',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'HL50BMSO',
+            brandedFare: 'STANDARD',
+            class: 'H',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'HL50BMSO',
+            brandedFare: 'STANDARD',
+            class: 'K',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

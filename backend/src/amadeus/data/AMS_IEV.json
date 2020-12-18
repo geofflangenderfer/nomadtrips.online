@@ -1,0 +1,86 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT17H5M',
+        segments: [
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T19:05:00' },
+            arrival: { iataCode: 'OSL', at: '2020-12-10T20:50:00' },
+            carrierCode: 'SK',
+            number: '828',
+            aircraft: { code: '73G' },
+            operating: { carrierCode: 'SK' },
+            duration: 'PT1H45M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'OSL', at: '2020-12-11T09:30:00' },
+            arrival: {
+              iataCode: 'KBP',
+              terminal: 'D',
+              at: '2020-12-11T13:10:00'
+            },
+            carrierCode: 'SK',
+            number: '4298',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'SK' },
+            duration: 'PT2H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '132.23',
+      base: '46.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '132.23',
+      additionalServices: [ { amount: '84.93', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'SK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '132.23', base: '46.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TEOGHT',
+            brandedFare: 'GOLIGHT',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TEOGHT',
+            brandedFare: 'GOLIGHT',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

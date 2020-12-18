@@ -1,0 +1,5 @@
+- Connect DB to logi composer 
+  - [[https://documentation.logianalytics.com/composerrapid/content/topics/connectors/connectors-managing.html][connector/connector server defined in composer data store]]
+  - [[https://documentation.logianalytics.com/composerrapid/content/topics/connections/connections-managing.html][define data store connection]]
+  - [[https://documentation.logianalytics.com/composerrapid/content/topics/datasources/data-source-config-overview.html][define data source configuration]]
+

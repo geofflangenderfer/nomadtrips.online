@@ -1,0 +1,122 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 5,
+    itineraries: [
+      {
+        duration: 'PT17H',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CAN',
+              terminal: '1',
+              at: '2020-12-10T08:10:00'
+            },
+            arrival: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-10T11:05:00'
+            },
+            carrierCode: 'CA',
+            number: '1310',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'CA' },
+            duration: 'PT2H55M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-10T13:35:00'
+            },
+            arrival: {
+              iataCode: 'SVO',
+              terminal: 'F',
+              at: '2020-12-10T17:00:00'
+            },
+            carrierCode: 'CA',
+            number: '909',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'CA' },
+            duration: 'PT8H25M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SVO',
+              terminal: 'B',
+              at: '2020-12-10T18:40:00'
+            },
+            arrival: {
+              iataCode: 'LED',
+              terminal: '1',
+              at: '2020-12-10T20:10:00'
+            },
+            carrierCode: 'SU',
+            number: '26',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'SU' },
+            duration: 'PT1H30M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '840.19',
+      base: '527.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '840.19'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'CA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '840.19', base: '527.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLRCOBB',
+            class: 'Q',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLRCOBB',
+            class: 'Q',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLRCOBB',
+            class: 'T',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

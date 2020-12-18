@@ -1,0 +1,83 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT18H40M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CDG',
+              terminal: '2A',
+              at: '2020-12-10T20:05:00'
+            },
+            arrival: { iataCode: 'OSL', at: '2020-12-10T22:25:00' },
+            carrierCode: 'DY',
+            number: '1499',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'DY' },
+            duration: 'PT2H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'OSL', at: '2020-12-11T08:50:00' },
+            arrival: { iataCode: 'TFS', at: '2020-12-11T13:45:00' },
+            carrierCode: 'DY',
+            number: '1822',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'DY' },
+            duration: 'PT5H55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '174.61',
+      base: '133.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '174.61'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'DY' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '174.61', base: '133.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'QKAMP',
+            class: 'Q',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QKAMP',
+            class: 'Q',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

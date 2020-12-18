@@ -1,0 +1,115 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT25H',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-10T21:40:00'
+            },
+            arrival: {
+              iataCode: 'BOG',
+              terminal: '1',
+              at: '2020-12-11T03:40:00'
+            },
+            carrierCode: 'AV',
+            number: '121',
+            aircraft: { code: '788' },
+            duration: 'PT11H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'BOG',
+              terminal: '1',
+              at: '2020-12-11T04:45:00'
+            },
+            arrival: { iataCode: 'SAL', at: '2020-12-11T06:50:00' },
+            carrierCode: 'AV',
+            number: '366',
+            aircraft: { code: '319' },
+            duration: 'PT3H5M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'SAL', at: '2020-12-11T14:55:00' },
+            arrival: {
+              iataCode: 'CUN',
+              terminal: '2',
+              at: '2020-12-11T17:40:00'
+            },
+            carrierCode: 'AV',
+            number: '636',
+            aircraft: { code: '320' },
+            duration: 'PT1H45M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '904.77',
+      base: '694.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '904.77',
+      additionalServices: [ { amount: '67.13', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AV' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '904.77', base: '694.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'ELXB1BRR',
+            brandedFare: 'S',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'ELXB1BRR',
+            brandedFare: 'S',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'ELXB1BRR',
+            brandedFare: 'S',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

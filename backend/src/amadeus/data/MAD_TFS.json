@@ -1,0 +1,66 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT3H',
+        segments: [
+          {
+            departure: {
+              iataCode: 'MAD',
+              terminal: '4',
+              at: '2020-12-10T08:25:00'
+            },
+            arrival: { iataCode: 'TFS', at: '2020-12-10T10:25:00' },
+            carrierCode: 'IB',
+            number: '3978',
+            aircraft: { code: '32A' },
+            operating: { carrierCode: 'I2' },
+            duration: 'PT3H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '188.98',
+      base: '166.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '188.98',
+      additionalServices: [ { amount: '48.53', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'IB' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '188.98', base: '166.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SDNOB2',
+            brandedFare: 'NOBAG',
+            class: 'S',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

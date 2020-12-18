@@ -1,0 +1,89 @@
+#!/usr/bin/env node
+const { AirBnbClient } = require('airbnb-private-api');
+const fs = require('fs')
+
+// phone auth
+//let airbnb = new AirBnbClient({
+//    phone: '528128588563'
+//    session_path: '/home/geofflangenderfer/work/nomadtrips.online/backend',
+//});
+//(async() => {
+//    try {
+//        // First you need to send request to receive the SMS code
+//        await airbnb._send_auth_code_to_phone();
+//
+//        // After receiving the SMS code you need to submit it in order to receive the login credentials
+//        let response = await airbnb._authentication_by_phone(SMS_CODE);
+//        console.log('Login details: ', response);
+//    } catch (error) {
+//        console.log('Error: ', error);
+//    }
+//})()
+// email auth
+let airbnb = new AirBnbClient({
+    email: 'geoff.langenderfer@gmail.com',
+    password: 'w0rdp@ss',
+    session_path: '/home/geofflangenderfer/work/nomadtrips.online/backend',
+});
+// must be run first time only
+//(async() => {
+//    try {
+//        let response = await airbnb._authentication_by_email();
+//        console.log('Login details: ', response);
+//    } catch (error) {
+//        console.log('Error: ', error);
+//    }
+//})()
+
+let getFormattedDate = date => {
+  return (date.getFullYear().toString()
+	+ "-"
+	+ (date.getMonth() + 1).toString()
+	+ "-"
+	+ date.getDate().toString()
+  )
+}
+let input_city = process.argv[2]
+let cost_for_local = -1
+let nomadListJson= "/home/geofflangenderfer/work/nomadtrips.online/backend/src/nomadlist/nomadlist.json"
+fs.readFile(nomadListJson, function read(err, data) {
+  if (err) {
+      throw err;
+  }
+  const content = JSON.parse(data);
+
+  // Invoke the next step here however you like
+  //;   // Put all of the code here (not the best solution)
+  cost_for_local = getCostForLocal(content);   // Or put the next step in a function and invoke it
+});
+
+function getCostForLocal(content) {
+  for (city of content.cities) {
+    if (city.short_slug === input_city) {
+      return city.cost_for_local_in_usd
+    }
+  }
+}
+
+// https://stackoverflow.com/questions/3552461/how-to-format-a-javascript-date
+// need to massage date to correct format
+
+(async () => {
+    try {
+        await airbnb._load_session();
+        let response = await airbnb._get_listings_from_search({
+            adults: 1,
+            checkin: getFormattedDate(new Date()),
+            checkout: getFormattedDate(new Date(Date.now() + 1000 /*sec*/ * 60 /*min*/ * 60 /*hour*/ * 24 /*day*/ * 28)),
+            query: input_city, // no specific format required
+            _limit: 50,
+            amenities: [4,5,8],
+            price_max: 0.8*cost_for_local,
+            price_min: 0.3*cost_for_local,
+            room_types: ['Entire home/apt', 'Private room'],
+        });
+        console.log(JSON.stringify(response));
+    } catch (error) {
+        console.log('Error: ', error);
+    }
+})();

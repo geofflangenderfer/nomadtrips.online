@@ -1,0 +1,86 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT24H55M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'MAD',
+              terminal: '1',
+              at: '2020-12-10T13:05:00'
+            },
+            arrival: { iataCode: 'ATH', at: '2020-12-10T17:40:00' },
+            carrierCode: 'A3',
+            number: '701',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'A3' },
+            duration: 'PT3H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'ATH', at: '2020-12-11T13:30:00' },
+            arrival: { iataCode: 'IST', at: '2020-12-11T16:00:00' },
+            carrierCode: 'A3',
+            number: '992',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'A3' },
+            duration: 'PT1H30M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '102.73',
+      base: '47.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '102.73',
+      additionalServices: [ { amount: '36.40', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'A3' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '102.73', base: '47.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'UNLGTLC',
+            brandedFare: 'LIGHT',
+            class: 'U',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'UNLGTLC',
+            brandedFare: 'LIGHT',
+            class: 'U',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

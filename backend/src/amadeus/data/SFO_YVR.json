@@ -1,0 +1,97 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT9H1M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'SFO',
+              terminal: '3',
+              at: '2020-12-10T06:30:00'
+            },
+            arrival: {
+              iataCode: 'LAX',
+              terminal: '7',
+              at: '2020-12-10T08:21:00'
+            },
+            carrierCode: 'UA',
+            number: '504',
+            aircraft: { code: '739' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT1H51M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'LAX',
+              terminal: '6',
+              at: '2020-12-10T12:25:00'
+            },
+            arrival: {
+              iataCode: 'YVR',
+              terminal: 'M',
+              at: '2020-12-10T15:31:00'
+            },
+            carrierCode: 'UA',
+            number: '8247',
+            aircraft: { code: '7M8' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT3H6M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '396.10',
+      base: '386.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '396.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '396.10', base: '386.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TAA0AHES',
+            class: 'T',
+            sliceDiceIndicator: 'LOCAL_AVAILABILITY',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QNA0ACEN',
+            class: 'Q',
+            sliceDiceIndicator: 'LOCAL_AVAILABILITY',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

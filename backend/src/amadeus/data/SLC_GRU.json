@@ -1,0 +1,120 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT19H10M',
+        segments: [
+          {
+            departure: { iataCode: 'SLC', at: '2020-12-10T12:40:00' },
+            arrival: {
+              iataCode: 'ORD',
+              terminal: '1',
+              at: '2020-12-10T16:47:00'
+            },
+            carrierCode: 'AC',
+            number: '5623',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT3H7M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'ORD',
+              terminal: '2',
+              at: '2020-12-10T18:35:00'
+            },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T21:11:00'
+            },
+            carrierCode: 'AC',
+            number: '7682',
+            aircraft: { code: 'E75' },
+            duration: 'PT1H36M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T23:55:00'
+            },
+            arrival: {
+              iataCode: 'GRU',
+              terminal: '3',
+              at: '2020-12-11T11:50:00'
+            },
+            carrierCode: 'AC',
+            number: '90',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT9H55M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '1022.60',
+      base: '889.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '1022.60'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '1022.60', base: '889.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VNA0A0FL',
+            brandedFare: 'STANDARD',
+            class: 'V',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'VNA0A0FL',
+            brandedFare: 'STANDARD',
+            class: 'V',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'S0LBTO',
+            brandedFare: 'STANDARD',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

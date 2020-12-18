@@ -1,0 +1,98 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT23H55M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'MAD',
+              terminal: '4',
+              at: '2020-12-10T10:20:00'
+            },
+            arrival: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-10T15:30:00'
+            },
+            carrierCode: 'AY',
+            number: '1662',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'AY' },
+            duration: 'PT4H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-10T23:55:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '1',
+              at: '2020-12-11T17:15:00'
+            },
+            carrierCode: 'AY',
+            number: '131',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'AY' },
+            duration: 'PT11H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '520.18',
+      base: '306.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '520.18',
+      additionalServices: [ { amount: '84.93', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AY' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '520.18', base: '306.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'NNN0S9BZ',
+            brandedFare: 'ELIGHT',
+            class: 'N',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'NNN0S9BZ',
+            brandedFare: 'ELIGHT',
+            class: 'N',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

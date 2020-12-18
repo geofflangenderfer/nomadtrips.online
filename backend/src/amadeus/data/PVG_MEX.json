@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT20H25M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PVG',
+              terminal: '2',
+              at: '2020-12-10T17:50:00'
+            },
+            arrival: {
+              iataCode: 'YVR',
+              terminal: 'M',
+              at: '2020-12-10T12:10:00'
+            },
+            carrierCode: 'CA',
+            number: '7455',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT10H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'YVR',
+              terminal: 'M',
+              at: '2020-12-10T16:55:00'
+            },
+            arrival: {
+              iataCode: 'MEX',
+              terminal: '1',
+              at: '2020-12-11T00:15:00'
+            },
+            carrierCode: 'AC',
+            number: '996',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT5H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '671.02',
+      base: '472.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '671.02'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '671.02', base: '472.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLXORCDN',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LLYA02TG',
+            class: 'L',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

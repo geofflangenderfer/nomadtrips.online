@@ -1,0 +1,92 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT15H55M',
+        segments: [
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T11:05:00' },
+            arrival: {
+              iataCode: 'LGA',
+              terminal: 'B',
+              at: '2020-12-10T12:19:00'
+            },
+            carrierCode: 'UA',
+            number: '6158',
+            aircraft: { code: 'CR7' },
+            duration: 'PT1H14M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'EWR',
+              terminal: 'C',
+              at: '2020-12-10T19:20:00'
+            },
+            arrival: {
+              iataCode: 'BCN',
+              terminal: '1',
+              at: '2020-12-11T09:00:00'
+            },
+            carrierCode: 'UA',
+            number: '120',
+            aircraft: { code: '763' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT7H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '286.10',
+      base: '57.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '286.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '286.10', base: '57.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KND6YLGT',
+            brandedFare: 'ECOBASIC',
+            class: 'K',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KND6YLGT',
+            brandedFare: 'ECOBASIC',
+            class: 'K',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

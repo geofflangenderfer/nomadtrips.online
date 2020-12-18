@@ -1,0 +1,98 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT4H25M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-10T13:35:00'
+            },
+            arrival: {
+              iataCode: 'PRG',
+              terminal: '1',
+              at: '2020-12-10T16:40:00'
+            },
+            carrierCode: 'QS',
+            number: '8651',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'OK' },
+            duration: 'PT2H5M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'PRG',
+              terminal: '2',
+              at: '2020-12-10T17:55:00'
+            },
+            arrival: {
+              iataCode: 'BUD',
+              terminal: '2B',
+              at: '2020-12-10T19:00:00'
+            },
+            carrierCode: 'QS',
+            number: '8788',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'OK' },
+            duration: 'PT1H5M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '132.61',
+      base: '28.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '132.61',
+      additionalServices: [ { amount: '42.47', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'OK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '132.61', base: '28.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'W0BOKQS',
+            brandedFare: 'LITE',
+            class: 'W',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'U0BOKQS',
+            brandedFare: 'LITE',
+            class: 'U',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

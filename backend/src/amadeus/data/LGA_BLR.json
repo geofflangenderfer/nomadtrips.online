@@ -1,0 +1,112 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT31H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LGA',
+              terminal: 'B',
+              at: '2020-12-10T08:20:00'
+            },
+            arrival: { iataCode: 'IAD', at: '2020-12-10T09:46:00' },
+            carrierCode: 'UA',
+            number: '6135',
+            aircraft: { code: 'CR7' },
+            duration: 'PT1H26M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T15:55:00' },
+            arrival: {
+              iataCode: 'FRA',
+              terminal: '1',
+              at: '2020-12-11T05:25:00'
+            },
+            carrierCode: 'LH',
+            number: '4725',
+            aircraft: { code: '74H' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT7H30M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'FRA',
+              terminal: '1',
+              at: '2020-12-11T12:50:00'
+            },
+            arrival: { iataCode: 'BLR', at: '2020-12-12T01:55:00' },
+            carrierCode: 'LH',
+            number: '754',
+            aircraft: { code: '74H' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT8H35M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '670.09',
+      base: '312.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '670.09'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LH' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '670.09', base: '312.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SND00NCS',
+            brandedFare: 'ECOSTAND',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'SND00NCS',
+            brandedFare: 'ECOSTAND',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'SND00NCS',
+            brandedFare: 'ECOSTAND',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

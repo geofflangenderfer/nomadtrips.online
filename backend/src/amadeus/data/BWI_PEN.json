@@ -1,0 +1,116 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT41H15M',
+        segments: [
+          {
+            departure: { iataCode: 'BWI', at: '2020-12-10T05:50:00' },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T07:19:00'
+            },
+            carrierCode: 'AC',
+            number: '8815',
+            aircraft: { code: 'CR9' },
+            duration: 'PT1H29M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T09:50:00'
+            },
+            arrival: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-11T14:30:00'
+            },
+            carrierCode: 'AC',
+            number: '15',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT15H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-12T08:15:00'
+            },
+            arrival: { iataCode: 'PEN', at: '2020-12-12T12:05:00' },
+            carrierCode: 'CX',
+            number: '633',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'CX' },
+            duration: 'PT3H50M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '733.56',
+      base: '519.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '733.56'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '733.56', base: '519.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'ANA0A9TG',
+            brandedFare: 'STANDARD',
+            class: 'A',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLXATO',
+            brandedFare: 'STANDARD',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLXATO',
+            brandedFare: 'STANDARD',
+            class: 'M',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

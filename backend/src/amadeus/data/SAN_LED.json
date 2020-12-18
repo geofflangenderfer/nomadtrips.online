@@ -1,0 +1,125 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT39H10M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'SAN',
+              terminal: '2',
+              at: '2020-12-10T12:40:00'
+            },
+            arrival: {
+              iataCode: 'JFK',
+              terminal: '4',
+              at: '2020-12-10T21:10:00'
+            },
+            carrierCode: 'AF',
+            number: '2779',
+            aircraft: { code: '75W' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT5H30M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '4',
+              at: '2020-12-11T18:45:00'
+            },
+            arrival: {
+              iataCode: 'CDG',
+              terminal: '2E',
+              at: '2020-12-12T08:00:00'
+            },
+            carrierCode: 'AF',
+            number: '3577',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT7H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'CDG',
+              terminal: '2E',
+              at: '2020-12-12T09:25:00'
+            },
+            arrival: {
+              iataCode: 'LED',
+              terminal: '1',
+              at: '2020-12-12T14:50:00'
+            },
+            carrierCode: 'AF',
+            number: '1464',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'AF' },
+            duration: 'PT3H25M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '789.07',
+      base: '462.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '789.07'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '789.07', base: '462.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLZJ01B3',
+            brandedFare: 'LIGHT1',
+            class: 'Q',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLZJ01B3',
+            brandedFare: 'LIGHT1',
+            class: 'Q',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'QLZJ01B3',
+            brandedFare: 'LIGHT1',
+            class: 'L',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

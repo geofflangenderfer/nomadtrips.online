@@ -1,0 +1,134 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT34H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LGA',
+              terminal: 'B',
+              at: '2020-12-10T15:00:00'
+            },
+            arrival: {
+              iataCode: 'SFO',
+              terminal: '3',
+              at: '2020-12-10T20:31:00'
+            },
+            carrierCode: 'UA',
+            number: '2110',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT8H31M',
+            stops: [
+              {
+                iataCode: 'ORD',
+                duration: 'PT1H26M',
+                arrivalAt: '2020-12-10T16:34:00',
+                departureAt: '2020-12-10T18:00:00'
+              }
+            ],
+            id: '1',
+            numberOfStops: 1,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SFO',
+              terminal: '1',
+              at: '2020-12-10T23:50:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '2',
+              at: '2020-12-12T12:00:00'
+            },
+            carrierCode: 'AI',
+            number: '7203',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'SQ' },
+            duration: 'PT20H10M',
+            stops: [
+              {
+                iataCode: 'HKG',
+                duration: 'PT1H',
+                arrivalAt: '2020-12-12T07:00:00',
+                departureAt: '2020-12-12T08:00:00'
+              }
+            ],
+            id: '2',
+            numberOfStops: 1,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SIN',
+              terminal: '3',
+              at: '2020-12-12T13:25:00'
+            },
+            arrival: { iataCode: 'PEN', at: '2020-12-12T14:50:00' },
+            carrierCode: 'MI',
+            number: '350',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'MI' },
+            duration: 'PT1H25M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '2536.62',
+      base: '2313.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '2536.62'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AI' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '2536.62', base: '2313.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'YAA0AFEY',
+            class: 'Y',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'WOWSQCS',
+            class: 'W',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'YIFSQ',
+            class: 'Y',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

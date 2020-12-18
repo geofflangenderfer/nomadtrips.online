@@ -1,0 +1,90 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT9H35M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'BCN',
+              terminal: '1',
+              at: '2020-12-10T06:00:00'
+            },
+            arrival: { iataCode: 'AMS', at: '2020-12-10T08:30:00' },
+            carrierCode: 'KL',
+            number: '1662',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT2H30M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T12:50:00' },
+            arrival: {
+              iataCode: 'LED',
+              terminal: '1',
+              at: '2020-12-10T17:35:00'
+            },
+            carrierCode: 'KL',
+            number: '1395',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'KL' },
+            duration: 'PT2H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '248.64',
+      base: '177.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '248.64',
+      additionalServices: [ { amount: '54.60', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '248.64', base: '177.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'HS50BBLG',
+            brandedFare: 'LIGHT2',
+            class: 'H',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'HS50BBLG',
+            brandedFare: 'LIGHT2',
+            class: 'H',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

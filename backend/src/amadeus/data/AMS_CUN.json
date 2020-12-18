@@ -1,0 +1,93 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT15H35M',
+        segments: [
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T10:45:00' },
+            arrival: {
+              iataCode: 'JFK',
+              terminal: '4',
+              at: '2020-12-10T13:06:00'
+            },
+            carrierCode: 'DL',
+            number: '49',
+            aircraft: { code: '339' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT8H21M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '4',
+              at: '2020-12-10T16:30:00'
+            },
+            arrival: {
+              iataCode: 'CUN',
+              terminal: '4',
+              at: '2020-12-10T20:20:00'
+            },
+            carrierCode: 'DL',
+            number: '1879',
+            aircraft: { code: '739' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT3H50M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '1762.77',
+      base: '1555.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '1762.77'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'DL' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '1762.77', base: '1555.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'BS00BENB',
+            brandedFare: 'MAINCABIN',
+            class: 'B',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'BS00BENB',
+            brandedFare: 'MAINCABIN',
+            class: 'B',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

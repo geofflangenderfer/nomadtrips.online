@@ -1,0 +1,89 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT24H',
+        segments: [
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T20:40:00' },
+            arrival: {
+              iataCode: 'NBO',
+              terminal: '1A',
+              at: '2020-12-11T07:00:00'
+            },
+            carrierCode: 'KQ',
+            number: '117',
+            aircraft: { code: '788' },
+            operating: { carrierCode: 'KQ' },
+            duration: 'PT8H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'NBO',
+              terminal: '1A',
+              at: '2020-12-11T16:55:00'
+            },
+            arrival: { iataCode: 'CPT', at: '2020-12-11T21:40:00' },
+            carrierCode: 'KQ',
+            number: '784',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'KQ' },
+            duration: 'PT5H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '475.28',
+      base: '305.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '475.28'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'KQ' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '475.28', base: '305.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'NLSRWNL',
+            brandedFare: 'STANDARD',
+            class: 'N',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'NLSRWNL',
+            brandedFare: 'STANDARD',
+            class: 'N',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

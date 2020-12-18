@@ -1,0 +1,109 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT34H55M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DTW',
+              terminal: 'N',
+              at: '2020-12-10T18:05:00'
+            },
+            arrival: {
+              iataCode: 'EWR',
+              terminal: 'C',
+              at: '2020-12-10T19:47:00'
+            },
+            carrierCode: 'UA',
+            number: '3527',
+            aircraft: { code: 'E70' },
+            duration: 'PT1H42M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '1',
+              at: '2020-12-10T23:20:00'
+            },
+            arrival: { iataCode: 'IST', at: '2020-12-11T17:25:00' },
+            carrierCode: 'TK',
+            number: '12',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'TK' },
+            duration: 'PT10H5M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'IST', at: '2020-12-12T02:25:00' },
+            arrival: { iataCode: 'CPT', at: '2020-12-12T12:00:00' },
+            carrierCode: 'TK',
+            number: '44',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'TK' },
+            duration: 'PT10H35M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '942.17',
+      base: '660.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '942.17'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'TK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '942.17', base: '660.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'OL3XOYY1',
+            class: 'G',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'OL3XOYY1',
+            class: 'O',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'OL3XOYY1',
+            class: 'O',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

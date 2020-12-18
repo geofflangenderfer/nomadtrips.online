@@ -1,0 +1,87 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT17H4M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LAX',
+              terminal: 'B',
+              at: '2020-12-10T22:41:00'
+            },
+            arrival: { iataCode: 'PTY', at: '2020-12-11T08:22:00' },
+            carrierCode: 'CM',
+            number: '303',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'CM' },
+            duration: 'PT6H41M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'PTY', at: '2020-12-11T11:28:00' },
+            arrival: {
+              iataCode: 'GRU',
+              terminal: '2',
+              at: '2020-12-11T20:45:00'
+            },
+            carrierCode: 'CM',
+            number: '701',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'CM' },
+            duration: 'PT7H17M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '436.35',
+      base: '425.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '436.35'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'CM' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '436.35', base: '425.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'OAAAOY1N',
+            class: 'O',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'OAAAOY1N',
+            class: 'O',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

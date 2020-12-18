@@ -1,0 +1,110 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 5,
+    itineraries: [
+      {
+        duration: 'PT45H35M',
+        segments: [
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-10T15:15:00' },
+            arrival: { iataCode: 'DOH', at: '2020-12-10T23:40:00' },
+            carrierCode: 'QR',
+            number: '274',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'QR' },
+            duration: 'PT6H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'DOH', at: '2020-12-11T08:10:00' },
+            arrival: {
+              iataCode: 'MAD',
+              terminal: '4S',
+              at: '2020-12-11T13:50:00'
+            },
+            carrierCode: 'QR',
+            number: '149',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'QR' },
+            duration: 'PT7H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MAD',
+              terminal: '4S',
+              at: '2020-12-11T23:55:00'
+            },
+            arrival: {
+              iataCode: 'MEX',
+              terminal: '1',
+              at: '2020-12-12T05:50:00'
+            },
+            carrierCode: 'QR',
+            number: '5066',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'IB' },
+            duration: 'PT12H55M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '1927.30',
+      base: '1639.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '1927.30'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'QR' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '1927.30', base: '1639.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLR7R1SO',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLR7R1SO',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLR7R1SO',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

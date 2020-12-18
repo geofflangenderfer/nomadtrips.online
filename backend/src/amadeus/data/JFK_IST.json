@@ -1,0 +1,89 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT16H35M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '7',
+              at: '2020-12-10T22:50:00'
+            },
+            arrival: { iataCode: 'WAW', at: '2020-12-11T13:10:00' },
+            carrierCode: 'LO',
+            number: '27',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'LO' },
+            duration: 'PT8H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'WAW',
+              terminal: 'A',
+              at: '2020-12-11T18:50:00'
+            },
+            arrival: { iataCode: 'IST', at: '2020-12-11T23:25:00' },
+            carrierCode: 'LO',
+            number: '5133',
+            aircraft: { code: '32B' },
+            operating: { carrierCode: 'TK' },
+            duration: 'PT2H35M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '571.79',
+      base: '254.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '571.79'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LO' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '571.79', base: '254.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'L1LANUZ0',
+            brandedFare: 'ECOSTAND',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'L1LANUZ0',
+            brandedFare: 'ECOSTAND',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

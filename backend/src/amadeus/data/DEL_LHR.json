@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT14H25M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DEL',
+              terminal: '3',
+              at: '2020-12-10T10:40:00'
+            },
+            arrival: {
+              iataCode: 'BOM',
+              terminal: '2',
+              at: '2020-12-10T12:55:00'
+            },
+            carrierCode: 'AI',
+            number: '865',
+            aircraft: { code: '32B' },
+            operating: { carrierCode: 'AI' },
+            duration: 'PT2H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'BOM',
+              terminal: '2',
+              at: '2020-12-10T15:05:00'
+            },
+            arrival: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-10T19:35:00'
+            },
+            carrierCode: 'AI',
+            number: '129',
+            aircraft: { code: '788' },
+            operating: { carrierCode: 'AI' },
+            duration: 'PT10H',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '354.57',
+      base: '62.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '354.57'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AI' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '354.57', base: '62.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TLOWDEL',
+            class: 'K',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TLOWDEL',
+            class: 'T',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

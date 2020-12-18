@@ -1,0 +1,81 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT14H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'ONT',
+              terminal: '0',
+              at: '2020-12-10T23:35:00'
+            },
+            arrival: { iataCode: 'MCO', at: '2020-12-11T07:19:00' },
+            carrierCode: 'F9',
+            number: '1150',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'F9' },
+            duration: 'PT4H44M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'MCO', at: '2020-12-11T13:45:00' },
+            arrival: { iataCode: 'PWM', at: '2020-12-11T16:40:00' },
+            carrierCode: 'F9',
+            number: '1186',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'F9' },
+            duration: 'PT2H55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '279.20',
+      base: '259.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '279.20'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'F9' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '279.20', base: '259.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'V01PXP5',
+            class: 'V'
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'V01PXP5',
+            class: 'V'
+          }
+        ]
+      }
+    ]
+  }
+]

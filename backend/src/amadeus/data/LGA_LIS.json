@@ -1,0 +1,124 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT38H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LGA',
+              terminal: '0',
+              at: '2020-12-10T20:00:00'
+            },
+            arrival: {
+              iataCode: 'BOS',
+              terminal: 'A',
+              at: '2020-12-10T21:17:00'
+            },
+            carrierCode: 'DL',
+            number: '5641',
+            aircraft: { code: 'E75' },
+            duration: 'PT1H17M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'BOS',
+              terminal: 'E',
+              at: '2020-12-11T17:20:00'
+            },
+            arrival: {
+              iataCode: 'CDG',
+              terminal: '2E',
+              at: '2020-12-12T06:10:00'
+            },
+            carrierCode: 'DL',
+            number: '8399',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'AF' },
+            duration: 'PT6H50M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'CDG',
+              terminal: '2F',
+              at: '2020-12-12T13:25:00'
+            },
+            arrival: {
+              iataCode: 'LIS',
+              terminal: '1',
+              at: '2020-12-12T15:05:00'
+            },
+            carrierCode: 'DL',
+            number: '8444',
+            aircraft: { code: '319' },
+            operating: { carrierCode: 'AF' },
+            duration: 'PT2H40M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '254.52',
+      base: '1.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '254.52'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'DL' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '254.52', base: '1.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VL3X09B1',
+            brandedFare: 'BASICECON',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'VL3X09B1',
+            brandedFare: 'BASICECON',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'VL3X09B1',
+            brandedFare: 'BASICECON',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT21H15M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'KUL',
+              terminal: 'M',
+              at: '2020-12-10T10:00:00'
+            },
+            arrival: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-10T14:05:00'
+            },
+            carrierCode: 'CX',
+            number: '728',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'CX' },
+            duration: 'PT4H5M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-10T16:30:00'
+            },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '1',
+              at: '2020-12-10T18:15:00'
+            },
+            carrierCode: 'AC',
+            number: '16',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT14H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '494.18',
+      base: '304.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '494.18'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '494.18', base: '304.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KLSTO',
+            brandedFare: 'STANDARD',
+            class: 'N',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KLSTO',
+            brandedFare: 'STANDARD',
+            class: 'K',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

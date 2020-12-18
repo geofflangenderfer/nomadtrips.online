@@ -1,0 +1,117 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 5,
+    itineraries: [
+      {
+        duration: 'PT27H45M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CTU',
+              terminal: '2',
+              at: '2020-12-10T22:30:00'
+            },
+            arrival: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-11T01:30:00'
+            },
+            carrierCode: 'CA',
+            number: '1426',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'CA' },
+            duration: 'PT3H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-11T08:45:00'
+            },
+            arrival: { iataCode: 'WAW', at: '2020-12-11T11:30:00' },
+            carrierCode: 'LO',
+            number: '92',
+            aircraft: { code: '788' },
+            operating: { carrierCode: 'LO' },
+            duration: 'PT9H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'WAW', at: '2020-12-11T17:50:00' },
+            arrival: {
+              iataCode: 'BUD',
+              terminal: '2A',
+              at: '2020-12-11T19:15:00'
+            },
+            carrierCode: 'LO',
+            number: '531',
+            aircraft: { code: 'E70' },
+            operating: { carrierCode: 'LO' },
+            duration: 'PT1H25M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '529.74',
+      base: '322.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '529.74'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LO' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '529.74', base: '322.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'U1ANCY0',
+            brandedFare: 'ECOSTAND',
+            class: 'T',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'U1ANCY0',
+            brandedFare: 'ECOSTAND',
+            class: 'U',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'U1ANCY0',
+            brandedFare: 'ECOSTAND',
+            class: 'U',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

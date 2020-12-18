@@ -1,0 +1,108 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT15H18M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LGA',
+              terminal: 'A',
+              at: '2020-12-10T16:15:00'
+            },
+            arrival: { iataCode: 'MCO', at: '2020-12-10T19:14:00' },
+            carrierCode: 'B6',
+            number: '299',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'B6' },
+            duration: 'PT2H59M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'MCO', at: '2020-12-11T00:30:00' },
+            arrival: {
+              iataCode: 'BOG',
+              terminal: '1',
+              at: '2020-12-11T04:29:00'
+            },
+            carrierCode: 'AV',
+            number: '237',
+            aircraft: { code: '320' },
+            duration: 'PT3H59M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'BOG',
+              terminal: '1',
+              at: '2020-12-11T06:30:00'
+            },
+            arrival: { iataCode: 'MDE', at: '2020-12-11T07:33:00' },
+            carrierCode: 'AV',
+            number: '9302',
+            aircraft: { code: '320' },
+            duration: 'PT1H3M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '378.81',
+      base: '349.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '378.81'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AV' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '378.81', base: '349.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'PL0QBEY5',
+            class: 'P',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LEOB2BR9',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'LEOB2BR9',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

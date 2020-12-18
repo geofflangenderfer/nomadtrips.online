@@ -1,0 +1,84 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT13H35M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'BOS',
+              terminal: 'A',
+              at: '2020-12-10T19:00:00'
+            },
+            arrival: { iataCode: 'AMS', at: '2020-12-11T08:00:00' },
+            carrierCode: 'DL',
+            number: '258',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT7H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-11T12:45:00' },
+            arrival: { iataCode: 'ZAG', at: '2020-12-11T14:35:00' },
+            carrierCode: 'DL',
+            number: '9355',
+            aircraft: { code: 'E90' },
+            duration: 'PT1H50M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '539.98',
+      base: '294.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '539.98'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'DL' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '539.98', base: '294.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TL5X09B3',
+            brandedFare: 'BASICECON',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TL5X09B3',
+            brandedFare: 'BASICECON',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

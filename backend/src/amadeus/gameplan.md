@@ -1,0 +1,4 @@
+- get user origin
+- build flight price database from preset origin/destination pairs
+- build destination airbnb prices database from nomadlist
+- display table with ascending total price nomad trips

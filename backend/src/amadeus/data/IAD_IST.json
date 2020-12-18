@@ -1,0 +1,89 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT25H15M',
+        segments: [
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T21:15:00' },
+            arrival: {
+              iataCode: 'AUH',
+              terminal: '3',
+              at: '2020-12-11T19:05:00'
+            },
+            carrierCode: 'EY',
+            number: '130',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'EY' },
+            duration: 'PT12H50M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'AUH',
+              terminal: '1',
+              at: '2020-12-12T02:10:00'
+            },
+            arrival: { iataCode: 'IST', at: '2020-12-12T06:30:00' },
+            carrierCode: 'EY',
+            number: '4151',
+            aircraft: { code: '321' },
+            operating: { carrierCode: 'TK' },
+            duration: 'PT5H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '637.99',
+      base: '374.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '637.99'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'EY' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '637.99', base: '374.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LLOWUS',
+            brandedFare: 'ECOCLASSIC',
+            class: 'L',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LLOWUS',
+            brandedFare: 'ECOCLASSIC',
+            class: 'L',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

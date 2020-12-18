@@ -1,0 +1,103 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT39H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CGK',
+              terminal: '3',
+              at: '2020-12-10T21:45:00'
+            },
+            arrival: {
+              iataCode: 'ADD',
+              terminal: '2',
+              at: '2020-12-11T05:35:00'
+            },
+            carrierCode: 'ET',
+            number: '629',
+            aircraft: { code: '787' },
+            operating: { carrierCode: 'ET' },
+            duration: 'PT11H50M',
+            stops: [
+              {
+                iataCode: 'SIN',
+                duration: 'PT1H',
+                arrivalAt: '2020-12-11T00:25:00',
+                departureAt: '2020-12-11T01:25:00'
+              }
+            ],
+            id: '1',
+            numberOfStops: 1,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'ADD',
+              terminal: '2',
+              at: '2020-12-12T01:20:00'
+            },
+            arrival: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-12T06:35:00'
+            },
+            carrierCode: 'ET',
+            number: '700',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'ET' },
+            duration: 'PT8H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '467.84',
+      base: '272.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '467.84'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'ET' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '467.84', base: '272.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLOWID',
+            class: 'H',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'HLOWID',
+            class: 'H',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

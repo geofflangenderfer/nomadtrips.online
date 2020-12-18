@@ -1,0 +1,63 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT3H30M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CDG',
+              terminal: '2C',
+              at: '2020-12-10T14:25:00'
+            },
+            arrival: { iataCode: 'SAW', at: '2020-12-10T19:55:00' },
+            carrierCode: 'TK',
+            number: '7765',
+            aircraft: { code: '73H' },
+            duration: 'PT3H30M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '122.00',
+      base: '1.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '122.00'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'TK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '122.00', base: '1.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'UY1AJOSW',
+            class: 'U',
+            includedCheckedBags: { weight: 20, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

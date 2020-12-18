@@ -1,0 +1,117 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT31H21M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DEL',
+              terminal: '3',
+              at: '2020-12-10T17:00:00'
+            },
+            arrival: {
+              iataCode: 'BOM',
+              terminal: '2',
+              at: '2020-12-10T19:15:00'
+            },
+            carrierCode: 'AI',
+            number: '537',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'AI' },
+            duration: 'PT2H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'BOM',
+              terminal: '2',
+              at: '2020-12-11T01:30:00'
+            },
+            arrival: {
+              iataCode: 'EWR',
+              terminal: 'B',
+              at: '2020-12-11T07:15:00'
+            },
+            carrierCode: 'AI',
+            number: '191',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'AI' },
+            duration: 'PT16H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'EWR',
+              terminal: 'C',
+              at: '2020-12-11T12:34:00'
+            },
+            arrival: { iataCode: 'PWM', at: '2020-12-11T13:51:00' },
+            carrierCode: 'UA',
+            number: '4992',
+            aircraft: { code: 'ERJ' },
+            duration: 'PT1H17M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '674.27',
+      base: '359.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '674.27'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AI' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '674.27', base: '359.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'UEOWIEWR',
+            class: 'K',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'UEOWIEWR',
+            class: 'U',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'UEOWIEWR',
+            class: 'G',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

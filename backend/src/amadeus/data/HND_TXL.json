@@ -1,0 +1,91 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT14H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'HND',
+              terminal: '3',
+              at: '2020-12-10T11:35:00'
+            },
+            arrival: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-10T15:00:00'
+            },
+            carrierCode: 'JL',
+            number: '47',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'JL' },
+            duration: 'PT10H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-10T17:25:00'
+            },
+            arrival: { iataCode: 'TXL', at: '2020-12-10T18:25:00' },
+            carrierCode: 'JL',
+            number: '6823',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'AY' },
+            duration: 'PT2H',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '3030.69',
+      base: '2948.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '3030.69'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'JL' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '3030.69', base: '2948.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'PREMIUM_ECONOMY',
+            fareBasis: 'BXOWZPTS',
+            class: 'W',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'BXOWZPTS',
+            class: 'B',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

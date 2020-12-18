@@ -1,0 +1,88 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 1,
+    itineraries: [
+      {
+        duration: 'PT8H20M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'SLC',
+              terminal: '1',
+              at: '2020-12-10T10:30:00'
+            },
+            arrival: { iataCode: 'PDX', at: '2020-12-10T11:25:00' },
+            carrierCode: 'AS',
+            number: '3415',
+            aircraft: { code: 'E75' },
+            duration: 'PT1H55M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'PDX', at: '2020-12-10T12:10:00' },
+            arrival: {
+              iataCode: 'CUN',
+              terminal: '2',
+              at: '2020-12-10T20:50:00'
+            },
+            carrierCode: 'AS',
+            number: '936',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'AS' },
+            duration: 'PT5H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '328.10',
+      base: '290.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '328.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AS' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '328.10', base: '290.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KH0OASBN',
+            brandedFare: 'SV',
+            class: 'X',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KH0OASBN',
+            brandedFare: 'SV',
+            class: 'X',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

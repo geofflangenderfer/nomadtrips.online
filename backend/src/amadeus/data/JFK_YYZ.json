@@ -1,0 +1,98 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT17H53M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'JFK',
+              terminal: '4',
+              at: '2020-12-10T19:25:00'
+            },
+            arrival: {
+              iataCode: 'MSP',
+              terminal: '1',
+              at: '2020-12-10T21:57:00'
+            },
+            carrierCode: 'DL',
+            number: '1151',
+            aircraft: { code: '717' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT3H32M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MSP',
+              terminal: '1',
+              at: '2020-12-11T09:55:00'
+            },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '3',
+              at: '2020-12-11T13:18:00'
+            },
+            carrierCode: 'DL',
+            number: '5031',
+            aircraft: { code: 'CR9' },
+            duration: 'PT2H23M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '488.10',
+      base: '478.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '488.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'DL' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '488.10', base: '478.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LA0NA0BC',
+            brandedFare: 'BASICECON',
+            class: 'E',
+            sliceDiceIndicator: 'LOCAL_AVAILABILITY',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TA0NA0BQ',
+            brandedFare: 'BASICECON',
+            class: 'E',
+            sliceDiceIndicator: 'LOCAL_AVAILABILITY',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT28H10M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PVG',
+              terminal: '2',
+              at: '2020-12-10T21:40:00'
+            },
+            arrival: { iataCode: 'PKX', at: '2020-12-11T00:25:00' },
+            carrierCode: 'HO',
+            number: '1253',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'HO' },
+            duration: 'PT2H45M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-11T13:15:00'
+            },
+            arrival: {
+              iataCode: 'BUD',
+              terminal: '2B',
+              at: '2020-12-11T18:50:00'
+            },
+            carrierCode: 'CA',
+            number: '721',
+            aircraft: { code: '330' },
+            operating: { carrierCode: 'CA' },
+            duration: 'PT12H35M',
+            stops: [
+              {
+                iataCode: 'MSQ',
+                duration: 'PT1H40M',
+                arrivalAt: '2020-12-11T17:25:00',
+                departureAt: '2020-12-11T19:05:00'
+              }
+            ],
+            id: '2',
+            numberOfStops: 1,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '535.62',
+      base: '331.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '535.62'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'CA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '535.62', base: '331.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLNCOBBB',
+            class: 'G',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLNCOBBB',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

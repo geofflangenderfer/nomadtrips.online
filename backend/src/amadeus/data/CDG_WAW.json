@@ -1,0 +1,94 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT6H15M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CDG',
+              terminal: '2A',
+              at: '2020-12-10T11:10:00'
+            },
+            arrival: {
+              iataCode: 'CPH',
+              terminal: '3',
+              at: '2020-12-10T13:00:00'
+            },
+            carrierCode: 'SK',
+            number: '566',
+            aircraft: { code: '73G' },
+            operating: { carrierCode: 'SK' },
+            duration: 'PT1H50M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'CPH',
+              terminal: '3',
+              at: '2020-12-10T16:05:00'
+            },
+            arrival: { iataCode: 'WAW', at: '2020-12-10T17:25:00' },
+            carrierCode: 'SK',
+            number: '2751',
+            aircraft: { code: '73G' },
+            operating: { carrierCode: 'SK' },
+            duration: 'PT1H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '126.05',
+      base: '34.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '126.05',
+      additionalServices: [ { amount: '84.93', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'SK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '126.05', base: '34.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'OEOGHT',
+            brandedFare: 'GOLIGHT',
+            class: 'O',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'OEOGHT',
+            brandedFare: 'GOLIGHT',
+            class: 'O',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

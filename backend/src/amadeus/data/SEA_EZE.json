@@ -1,0 +1,110 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT25H51M',
+        segments: [
+          {
+            departure: { iataCode: 'SEA', at: '2020-12-10T17:40:00' },
+            arrival: {
+              iataCode: 'LAX',
+              terminal: '6',
+              at: '2020-12-10T20:25:00'
+            },
+            carrierCode: 'AS',
+            number: '1092',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'AS' },
+            duration: 'PT2H45M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'LAX',
+              terminal: 'B',
+              at: '2020-12-10T22:41:00'
+            },
+            arrival: { iataCode: 'PTY', at: '2020-12-11T08:22:00' },
+            carrierCode: 'CM',
+            number: '303',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'CM' },
+            duration: 'PT6H41M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'PTY', at: '2020-12-11T15:19:00' },
+            arrival: {
+              iataCode: 'EZE',
+              terminal: 'A',
+              at: '2020-12-12T00:31:00'
+            },
+            carrierCode: 'CM',
+            number: '279',
+            aircraft: { code: '739' },
+            operating: { carrierCode: 'CM' },
+            duration: 'PT7H12M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '598.85',
+      base: '583.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '598.85'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'CM' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '598.85', base: '583.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KH0OAVMN',
+            class: 'K',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TAAAOZ1S',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'TAAAOZ1S',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

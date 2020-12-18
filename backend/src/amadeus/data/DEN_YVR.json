@@ -1,0 +1,85 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT5H30M',
+        segments: [
+          {
+            departure: { iataCode: 'DEN', at: '2020-12-10T13:35:00' },
+            arrival: { iataCode: 'YYC', at: '2020-12-10T16:05:00' },
+            carrierCode: 'WS',
+            number: '1571',
+            aircraft: { code: '7M8' },
+            operating: { carrierCode: 'WS' },
+            duration: 'PT2H30M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'YYC', at: '2020-12-10T17:30:00' },
+            arrival: {
+              iataCode: 'YVR',
+              terminal: 'M',
+              at: '2020-12-10T18:05:00'
+            },
+            carrierCode: 'WS',
+            number: '133',
+            aircraft: { code: '73W' },
+            operating: { carrierCode: 'WS' },
+            duration: 'PT1H35M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '201.10',
+      base: '191.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '201.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'WS' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '201.10', base: '191.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'KT0D0ZBG',
+            brandedFare: 'BASIC',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'KT0D0ZBG',
+            brandedFare: 'BASIC',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

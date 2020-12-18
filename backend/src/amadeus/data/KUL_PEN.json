@@ -1,0 +1,60 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT1H',
+        segments: [
+          {
+            departure: { iataCode: 'SZB', at: '2020-12-10T12:00:00' },
+            arrival: { iataCode: 'PEN', at: '2020-12-10T13:00:00' },
+            carrierCode: 'MH',
+            number: '5296',
+            aircraft: { code: 'AT7' },
+            operating: { carrierCode: 'FY' },
+            duration: 'PT1H',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '43.66',
+      base: '34.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '43.66'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'MH' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '43.66', base: '34.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'OMHFY',
+            class: 'O',
+            includedCheckedBags: { weight: 25, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

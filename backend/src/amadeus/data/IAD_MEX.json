@@ -1,0 +1,84 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT19H55M',
+        segments: [
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T16:05:00' },
+            arrival: { iataCode: 'SAL', at: '2020-12-10T19:30:00' },
+            carrierCode: 'AV',
+            number: '583',
+            aircraft: { code: '321' },
+            duration: 'PT4H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'SAL', at: '2020-12-11T08:45:00' },
+            arrival: {
+              iataCode: 'MEX',
+              terminal: '1',
+              at: '2020-12-11T11:00:00'
+            },
+            carrierCode: 'AV',
+            number: '430',
+            aircraft: { code: '319' },
+            duration: 'PT2H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '346.10',
+      base: '291.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '346.10',
+      additionalServices: [ { amount: '58.23', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AV' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '346.10', base: '291.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'EEOB1BRF',
+            brandedFare: 'S',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'EEOB1BRF',
+            brandedFare: 'S',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

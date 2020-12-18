@@ -1,0 +1,117 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 1,
+    itineraries: [
+      {
+        duration: 'PT28H35M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'SAN',
+              terminal: '2',
+              at: '2020-12-10T15:30:00'
+            },
+            arrival: {
+              iataCode: 'SFO',
+              terminal: '2',
+              at: '2020-12-10T17:09:00'
+            },
+            carrierCode: 'AS',
+            number: '3355',
+            aircraft: { code: 'E75' },
+            duration: 'PT1H39M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SFO',
+              terminal: 'I',
+              at: '2020-12-10T22:55:00'
+            },
+            arrival: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-12T06:10:00'
+            },
+            carrierCode: 'CX',
+            number: '873',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'CX' },
+            duration: 'PT15H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-12T08:15:00'
+            },
+            arrival: { iataCode: 'PEN', at: '2020-12-12T12:05:00' },
+            carrierCode: 'CX',
+            number: '633',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'CX' },
+            duration: 'PT3H50M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '930.58',
+      base: '905.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '930.58'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'CX' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '930.58', base: '905.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VH0OAVMN',
+            class: 'V',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'VRZZUSNO',
+            class: 'V',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'VRZZUSNO',
+            class: 'V',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

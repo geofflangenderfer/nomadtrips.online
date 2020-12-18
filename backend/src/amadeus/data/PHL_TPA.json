@@ -1,0 +1,63 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT2H40M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PHL',
+              terminal: 'D',
+              at: '2020-12-10T06:00:00'
+            },
+            arrival: { iataCode: 'TPA', at: '2020-12-10T08:40:00' },
+            carrierCode: 'NK',
+            number: '2631',
+            aircraft: { code: '32A' },
+            operating: { carrierCode: 'NK' },
+            duration: 'PT2H40M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '51.09',
+      base: '40.99',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '51.09'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'NK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '51.09', base: '40.99' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'UC1NR',
+            class: 'U'
+          }
+        ]
+      }
+    ]
+  }
+]

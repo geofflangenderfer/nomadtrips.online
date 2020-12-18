@@ -1,0 +1,121 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT23H40M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'HND',
+              terminal: '1',
+              at: '2020-12-10T07:10:00'
+            },
+            arrival: {
+              iataCode: 'KIX',
+              terminal: '1',
+              at: '2020-12-10T08:35:00'
+            },
+            carrierCode: 'AY',
+            number: '5816',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'JL' },
+            duration: 'PT1H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'KIX',
+              terminal: '1',
+              at: '2020-12-10T11:45:00'
+            },
+            arrival: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-10T15:00:00'
+            },
+            carrierCode: 'AY',
+            number: '78',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'AY' },
+            duration: 'PT10H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HEL',
+              terminal: '2',
+              at: '2020-12-10T17:15:00'
+            },
+            arrival: { iataCode: 'TFS', at: '2020-12-10T21:50:00' },
+            carrierCode: 'AY',
+            number: '1693',
+            aircraft: { code: '32B' },
+            operating: { carrierCode: 'AY' },
+            duration: 'PT6H35M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '3043.99',
+      base: '2948.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '3043.99'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AY' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '3043.99', base: '2948.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'BXOWZPTS',
+            brandedFare: 'ESAVER',
+            class: 'B',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'BXOWZPTS',
+            brandedFare: 'ESAVER',
+            class: 'B',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'BXOWZPTS',
+            brandedFare: 'ESAVER',
+            class: 'B',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

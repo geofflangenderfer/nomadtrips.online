@@ -1,0 +1,105 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT24H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-10T21:00:00'
+            },
+            arrival: {
+              iataCode: 'DXB',
+              terminal: '3',
+              at: '2020-12-11T05:00:00'
+            },
+            carrierCode: 'EK',
+            number: '385',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'EK' },
+            duration: 'PT12H',
+            stops: [
+              {
+                iataCode: 'BKK',
+                duration: 'PT1H50M',
+                arrivalAt: '2020-12-10T23:15:00',
+                departureAt: '2020-12-11T01:05:00'
+              }
+            ],
+            id: '1',
+            numberOfStops: 1,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'DXB',
+              terminal: '3',
+              at: '2020-12-11T09:40:00'
+            },
+            arrival: {
+              iataCode: 'LHR',
+              terminal: '3',
+              at: '2020-12-11T13:50:00'
+            },
+            carrierCode: 'EK',
+            number: '29',
+            aircraft: { code: '388' },
+            operating: { carrierCode: 'EK' },
+            duration: 'PT8H10M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '350.93',
+      base: '246.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '350.93'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'EK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '350.93', base: '246.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TLSOPHK1',
+            brandedFare: 'ECOSAVER',
+            class: 'T',
+            includedCheckedBags: { weight: 25, weightUnit: 'KG' }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TLSOPHK1',
+            brandedFare: 'ECOSAVER',
+            class: 'T',
+            includedCheckedBags: { weight: 25, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,100 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT23H',
+        segments: [
+          {
+            departure: { iataCode: 'IAD', at: '2020-12-10T04:00:00' },
+            arrival: { iataCode: 'SAL', at: '2020-12-10T07:10:00' },
+            carrierCode: 'AV',
+            number: '591',
+            aircraft: { code: '320' },
+            duration: 'PT4H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'SAL', at: '2020-12-10T08:30:00' },
+            arrival: { iataCode: 'LIM', at: '2020-12-10T13:45:00' },
+            carrierCode: 'AV',
+            number: '429',
+            aircraft: { code: '320' },
+            duration: 'PT4H15M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'LIM', at: '2020-12-10T22:50:00' },
+            arrival: {
+              iataCode: 'EZE',
+              terminal: 'A',
+              at: '2020-12-11T05:00:00'
+            },
+            carrierCode: 'AR',
+            number: '1365',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'AR' },
+            duration: 'PT4H10M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '706.10',
+      base: '696.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '706.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AV' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '706.10', base: '696.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'EEOB2BRS',
+            class: 'E',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'EEOB2BRS',
+            class: 'E',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'LOWWEB',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT14H35M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'MSP',
+              terminal: '1',
+              at: '2020-12-10T17:00:00'
+            },
+            arrival: { iataCode: 'AMS', at: '2020-12-11T08:15:00' },
+            carrierCode: 'VS',
+            number: '3934',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'DL' },
+            duration: 'PT8H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'AMS', at: '2020-12-11T12:45:00' },
+            arrival: { iataCode: 'ZAG', at: '2020-12-11T14:35:00' },
+            carrierCode: 'KL',
+            number: '1943',
+            aircraft: { code: 'E90' },
+            duration: 'PT1H50M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '2476.73',
+      base: '2166.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '2476.73'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'VS' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '2476.73', base: '2166.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'MN1V01M1',
+            brandedFare: 'CLASSIC',
+            class: 'M',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'MN1V01M1',
+            brandedFare: 'CLASSIC',
+            class: 'L',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

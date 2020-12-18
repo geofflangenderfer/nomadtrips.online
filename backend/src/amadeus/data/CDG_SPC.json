@@ -1,0 +1,113 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 8,
+    itineraries: [
+      {
+        duration: 'PT28H',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CDG',
+              terminal: '2F',
+              at: '2020-12-10T09:30:00'
+            },
+            arrival: {
+              iataCode: 'MAD',
+              terminal: '2',
+              at: '2020-12-10T11:35:00'
+            },
+            carrierCode: 'UX',
+            number: '2224',
+            aircraft: { code: '318' },
+            operating: { carrierCode: 'AF' },
+            duration: 'PT2H5M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MAD',
+              terminal: '2',
+              at: '2020-12-10T15:05:00'
+            },
+            arrival: { iataCode: 'LPA', at: '2020-12-10T17:05:00' },
+            carrierCode: 'UX',
+            number: '9164',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'UX' },
+            duration: 'PT3H',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'LPA', at: '2020-12-11T11:40:00' },
+            arrival: { iataCode: 'SPC', at: '2020-12-11T12:30:00' },
+            carrierCode: 'UX',
+            number: '2163',
+            aircraft: { code: 'AT7' },
+            operating: { carrierCode: 'PM' },
+            duration: 'PT50M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '227.41',
+      base: '172.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '227.41'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'UX' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '227.41', base: '172.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'NLYOEE',
+            brandedFare: 'STANDARD',
+            class: 'N',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'NLYOEE',
+            brandedFare: 'STANDARD',
+            class: 'N',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'NLYOEE',
+            brandedFare: 'STANDARD',
+            class: 'N',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 5,
+    itineraries: [
+      {
+        duration: 'PT27H55M',
+        segments: [
+          {
+            departure: { iataCode: 'SZX', at: '2020-12-10T10:20:00' },
+            arrival: { iataCode: 'FOC', at: '2020-12-10T12:00:00' },
+            carrierCode: 'MF',
+            number: '8077',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'MF' },
+            duration: 'PT1H40M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'FOC', at: '2020-12-10T18:55:00' },
+            arrival: {
+              iataCode: 'XMN',
+              terminal: '3',
+              at: '2020-12-10T19:50:00'
+            },
+            carrierCode: 'MF',
+            number: '8558',
+            aircraft: { code: '737' },
+            operating: { carrierCode: 'MF' },
+            duration: 'PT55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'XMN',
+              terminal: '3',
+              at: '2020-12-11T09:45:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '1',
+              at: '2020-12-11T14:15:00'
+            },
+            carrierCode: 'MF',
+            number: '851',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'MF' },
+            duration: 'PT4H30M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '217.79',
+      base: '113.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '217.79'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'MF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '217.79', base: '113.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TLOWSGC',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TLOWSGC',
+            class: 'S',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'TLOWSGC',
+            class: 'T',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

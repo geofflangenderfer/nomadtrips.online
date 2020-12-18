@@ -1,0 +1,93 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 7,
+    itineraries: [
+      {
+        duration: 'PT8H',
+        segments: [
+          {
+            departure: { iataCode: 'MIA', at: '2020-12-10T14:55:00' },
+            arrival: {
+              iataCode: 'MEX',
+              terminal: '2',
+              at: '2020-12-10T17:30:00'
+            },
+            carrierCode: 'AM',
+            number: '423',
+            aircraft: { code: 'E90' },
+            duration: 'PT3H35M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'MEX',
+              terminal: '2',
+              at: '2020-12-10T19:30:00'
+            },
+            arrival: {
+              iataCode: 'CUN',
+              terminal: '4',
+              at: '2020-12-10T22:55:00'
+            },
+            carrierCode: 'AM',
+            number: '554',
+            aircraft: { code: '737' },
+            operating: { carrierCode: 'AM' },
+            duration: 'PT2H25M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '249.10',
+      base: '211.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '249.10',
+      additionalServices: [ { amount: '36.40', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'AM' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '249.10', base: '211.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'QNNA0NME',
+            brandedFare: 'SL',
+            class: 'Q',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QNNA0NME',
+            brandedFare: 'SL',
+            class: 'Q',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

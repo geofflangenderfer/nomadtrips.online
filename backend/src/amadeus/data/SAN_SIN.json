@@ -1,0 +1,97 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT19H43M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'SAN',
+              terminal: '2',
+              at: '2020-12-10T08:32:00'
+            },
+            arrival: {
+              iataCode: 'SFO',
+              terminal: '3',
+              at: '2020-12-10T09:57:00'
+            },
+            carrierCode: 'UA',
+            number: '2055',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT1H25M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SFO',
+              terminal: 'I',
+              at: '2020-12-10T10:45:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '3',
+              at: '2020-12-11T20:15:00'
+            },
+            carrierCode: 'UA',
+            number: '29',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT17H30M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '513.10',
+      base: '503.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '513.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '513.10', base: '503.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLX0XUOS',
+            brandedFare: 'ECONOMY',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'SLX0XUOS',
+            brandedFare: 'ECONOMY',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

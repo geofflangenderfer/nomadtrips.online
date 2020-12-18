@@ -1,0 +1,89 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT13H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CDG',
+              terminal: '2C',
+              at: '2020-12-10T12:15:00'
+            },
+            arrival: { iataCode: 'YUL', at: '2020-12-10T14:10:00' },
+            carrierCode: 'TS',
+            number: '111',
+            aircraft: { code: '32Q' },
+            operating: { carrierCode: 'TS' },
+            duration: 'PT7H55M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'YUL', at: '2020-12-10T18:00:00' },
+            arrival: {
+              iataCode: 'YYZ',
+              terminal: '3',
+              at: '2020-12-10T19:20:00'
+            },
+            carrierCode: 'TS',
+            number: '450',
+            aircraft: { code: '32Q' },
+            operating: { carrierCode: 'TS' },
+            duration: 'PT1H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '432.43',
+      base: '218.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '432.43'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'TS' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '432.43', base: '218.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'EJBGT1EO',
+            brandedFare: 'BGT',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'EJBGT1EO',
+            brandedFare: 'BGT',
+            class: 'E',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT22H30M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CGK',
+              terminal: '3',
+              at: '2020-12-10T19:00:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '0',
+              at: '2020-12-10T21:55:00'
+            },
+            carrierCode: 'LX',
+            number: '9069',
+            aircraft: { code: '359' },
+            operating: { carrierCode: 'SQ' },
+            duration: 'PT1H55M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SIN',
+              terminal: '3',
+              at: '2020-12-11T00:05:00'
+            },
+            arrival: { iataCode: 'ZRH', at: '2020-12-11T06:15:00' },
+            carrierCode: 'LX',
+            number: '177',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'LX' },
+            duration: 'PT13H10M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'ZRH', at: '2020-12-11T06:55:00' },
+            arrival: { iataCode: 'TFS', at: '2020-12-11T10:30:00' },
+            carrierCode: 'LX',
+            number: '8214',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'WK' },
+            duration: 'PT4H35M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '1826.54',
+      base: '1530.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '1826.54',
+      additionalServices: [ { amount: '242.66', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LX' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '1826.54', base: '1530.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'MFFOWKT',
+            brandedFare: 'ECOFLEX',
+            class: 'M',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'MFFOWKT',
+            brandedFare: 'ECOFLEX',
+            class: 'M',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'MFFOWKT',
+            brandedFare: 'ECOFLEX',
+            class: 'M',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT19H55M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'ORD',
+              terminal: '5',
+              at: '2020-12-10T12:30:00'
+            },
+            arrival: {
+              iataCode: 'DEL',
+              terminal: '3',
+              at: '2020-12-11T14:15:00'
+            },
+            carrierCode: 'AI',
+            number: '126',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'AI' },
+            duration: 'PT14H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'DEL',
+              terminal: '3',
+              at: '2020-12-11T17:10:00'
+            },
+            arrival: { iataCode: 'BLR', at: '2020-12-11T19:55:00' },
+            carrierCode: 'AI',
+            number: '501',
+            aircraft: { code: '32B' },
+            operating: { carrierCode: 'AI' },
+            duration: 'PT2H45M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '603.77',
+      base: '340.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '603.77'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AI' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '603.77', base: '340.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'LEOWORDI',
+            class: 'L',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'LEOWORDI',
+            class: 'K',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

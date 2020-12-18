@@ -1,0 +1,121 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT45H5M',
+        segments: [
+          {
+            departure: { iataCode: 'BKK', at: '2020-12-10T08:20:00' },
+            arrival: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-10T12:10:00'
+            },
+            carrierCode: 'CX',
+            number: '700',
+            aircraft: { code: '333' },
+            operating: { carrierCode: 'CX' },
+            duration: 'PT2H50M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'HKG',
+              terminal: '1',
+              at: '2020-12-10T20:20:00'
+            },
+            arrival: {
+              iataCode: 'YVR',
+              terminal: 'M',
+              at: '2020-12-10T15:50:00'
+            },
+            carrierCode: 'AC',
+            number: '8',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT11H30M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'YVR',
+              terminal: 'M',
+              at: '2020-12-11T08:30:00'
+            },
+            arrival: {
+              iataCode: 'CUN',
+              terminal: '3',
+              at: '2020-12-11T17:25:00'
+            },
+            carrierCode: 'AC',
+            number: '932',
+            aircraft: { code: '7M8' },
+            operating: { carrierCode: 'AC' },
+            duration: 'PT5H55M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '634.81',
+      base: '506.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '634.81'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'AC' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '634.81', base: '506.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'ALSTO',
+            brandedFare: 'STANDARD',
+            class: 'S',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'ALSTO',
+            brandedFare: 'STANDARD',
+            class: 'A',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'ALYD02TG',
+            brandedFare: 'STANDARD',
+            class: 'A',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

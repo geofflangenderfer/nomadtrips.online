@@ -1,0 +1,122 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT14H25M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'KUL',
+              terminal: 'M',
+              at: '2020-12-10T09:10:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '1',
+              at: '2020-12-10T10:20:00'
+            },
+            carrierCode: 'MH',
+            number: '611',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'MH' },
+            duration: 'PT1H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'SIN',
+              terminal: '2',
+              at: '2020-12-10T15:00:00'
+            },
+            arrival: {
+              iataCode: 'FRA',
+              terminal: '1',
+              at: '2020-12-10T11:30:00'
+            },
+            carrierCode: 'LH',
+            number: '7345',
+            aircraft: { code: '388' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT3H30M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'FRA',
+              terminal: '1',
+              at: '2020-12-10T13:50:00'
+            },
+            arrival: { iataCode: 'OPO', at: '2020-12-10T15:35:00' },
+            carrierCode: 'LH',
+            number: '1178',
+            aircraft: { code: '32A' },
+            operating: { carrierCode: 'LH' },
+            duration: 'PT2H45M',
+            id: '3',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '755.55',
+      base: '450.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '755.55',
+      additionalServices: [ { amount: '242.66', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'LH' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '755.55', base: '450.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VRCOWMY',
+            brandedFare: 'ECOSTAND',
+            class: 'M',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'VRCOWMY',
+            brandedFare: 'ECOSTAND',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '3',
+            cabin: 'ECONOMY',
+            fareBasis: 'VRCOWMY',
+            brandedFare: 'ECOSTAND',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

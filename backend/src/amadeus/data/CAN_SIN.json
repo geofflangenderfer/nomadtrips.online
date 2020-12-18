@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT16H40M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'CAN',
+              terminal: '2',
+              at: '2020-12-10T21:35:00'
+            },
+            arrival: {
+              iataCode: 'XMN',
+              terminal: '3',
+              at: '2020-12-10T22:55:00'
+            },
+            carrierCode: 'MF',
+            number: '8302',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'MF' },
+            duration: 'PT1H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'XMN',
+              terminal: '3',
+              at: '2020-12-11T09:45:00'
+            },
+            arrival: {
+              iataCode: 'SIN',
+              terminal: '1',
+              at: '2020-12-11T14:15:00'
+            },
+            carrierCode: 'MF',
+            number: '851',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'MF' },
+            duration: 'PT4H30M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '204.15',
+      base: '107.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '204.15'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'MF' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '204.15', base: '107.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TLOWSGC',
+            class: 'V',
+            includedCheckedBags: { quantity: 1 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'TLOWSGC',
+            class: 'T',
+            includedCheckedBags: { quantity: 1 }
+          }
+        ]
+      }
+    ]
+  }
+]

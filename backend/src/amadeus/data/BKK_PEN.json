@@ -1,0 +1,89 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT5H15M',
+        segments: [
+          {
+            departure: { iataCode: 'BKK', at: '2020-12-10T11:05:00' },
+            arrival: {
+              iataCode: 'KUL',
+              terminal: 'M',
+              at: '2020-12-10T14:25:00'
+            },
+            carrierCode: 'MH',
+            number: '785',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'MH' },
+            duration: 'PT2H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'KUL',
+              terminal: 'M',
+              at: '2020-12-10T16:25:00'
+            },
+            arrival: { iataCode: 'PEN', at: '2020-12-10T17:20:00' },
+            carrierCode: 'MH',
+            number: '1152',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'MH' },
+            duration: 'PT55M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '197.70',
+      base: '171.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '197.70'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'MH' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '197.70', base: '171.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'VBXOWTH',
+            brandedFare: 'BASIC',
+            class: 'V',
+            includedCheckedBags: { weight: 20, weightUnit: 'KG' }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'VBXOWTH',
+            brandedFare: 'BASIC',
+            class: 'V',
+            includedCheckedBags: { weight: 20, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

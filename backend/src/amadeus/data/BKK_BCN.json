@@ -1,0 +1,93 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT21H50M',
+        segments: [
+          {
+            departure: { iataCode: 'BKK', at: '2020-12-10T20:35:00' },
+            arrival: {
+              iataCode: 'DXB',
+              terminal: '3',
+              at: '2020-12-11T00:50:00'
+            },
+            carrierCode: 'EK',
+            number: '373',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'EK' },
+            duration: 'PT7H15M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'DXB',
+              terminal: '3',
+              at: '2020-12-11T07:50:00'
+            },
+            arrival: {
+              iataCode: 'BCN',
+              terminal: '1',
+              at: '2020-12-11T12:25:00'
+            },
+            carrierCode: 'EK',
+            number: '185',
+            aircraft: { code: '77W' },
+            operating: { carrierCode: 'EK' },
+            duration: 'PT7H35M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '541.59',
+      base: '456.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '541.59'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'EK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '541.59', base: '456.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'QEEOPTH1',
+            brandedFare: 'ECOSAVER',
+            class: 'Q',
+            includedCheckedBags: { weight: 25, weightUnit: 'KG' }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'QEEOPTH1',
+            brandedFare: 'ECOSAVER',
+            class: 'Q',
+            includedCheckedBags: { weight: 25, weightUnit: 'KG' }
+          }
+        ]
+      }
+    ]
+  }
+]

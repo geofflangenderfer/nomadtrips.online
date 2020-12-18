@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT32H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DEL',
+              terminal: '3',
+              at: '2020-12-10T19:30:00'
+            },
+            arrival: {
+              iataCode: 'HND',
+              terminal: '3',
+              at: '2020-12-11T06:55:00'
+            },
+            carrierCode: 'JL',
+            number: '30',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'JL' },
+            duration: 'PT7H55M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'NRT',
+              terminal: '2',
+              at: '2020-12-11T18:30:00'
+            },
+            arrival: {
+              iataCode: 'BOS',
+              terminal: 'E',
+              at: '2020-12-11T17:05:00'
+            },
+            carrierCode: 'JL',
+            number: '8',
+            aircraft: { code: '789' },
+            operating: { carrierCode: 'JL' },
+            duration: 'PT12H35M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '759.03',
+      base: '668.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '759.03'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'JL' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '759.03', base: '668.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'MNN0OO2E',
+            class: 'M',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'MNN0OO2E',
+            class: 'M',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-11',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT33H50M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'DTW',
+              terminal: 'N',
+              at: '2020-12-10T19:15:00'
+            },
+            arrival: { iataCode: 'AMM', at: '2020-12-11T15:15:00' },
+            carrierCode: 'RJ',
+            number: '268',
+            aircraft: { code: '787' },
+            operating: { carrierCode: 'RJ' },
+            duration: 'PT13H',
+            stops: [
+              {
+                iataCode: 'YUL',
+                duration: 'PT1H',
+                arrivalAt: '2020-12-10T20:55:00',
+                departureAt: '2020-12-10T21:55:00'
+              }
+            ],
+            id: '1',
+            numberOfStops: 1,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'AMM', at: '2020-12-12T09:25:00' },
+            arrival: { iataCode: 'IST', at: '2020-12-12T13:05:00' },
+            carrierCode: 'RJ',
+            number: '165',
+            aircraft: { code: 'E95' },
+            operating: { carrierCode: 'RJ' },
+            duration: 'PT2H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '685.22',
+      base: '424.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '685.22'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ 'RJ' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '685.22', base: '424.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'NABOWUS',
+            brandedFare: 'ECPLUS',
+            class: 'N',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'NABOWUS',
+            brandedFare: 'ECPLUS',
+            class: 'N',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-09',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT25H40M',
+        segments: [
+          {
+            departure: { iataCode: 'BKK', at: '2020-12-10T14:35:00' },
+            arrival: {
+              iataCode: 'OVB',
+              terminal: 'B',
+              at: '2020-12-10T22:05:00'
+            },
+            carrierCode: 'S7',
+            number: '5704',
+            aircraft: { code: '32N' },
+            operating: { carrierCode: 'S7' },
+            duration: 'PT7H30M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'OVB',
+              terminal: 'A',
+              at: '2020-12-11T11:25:00'
+            },
+            arrival: {
+              iataCode: 'LED',
+              terminal: '1',
+              at: '2020-12-11T12:15:00'
+            },
+            carrierCode: 'S7',
+            number: '5003',
+            aircraft: { code: '73H' },
+            operating: { carrierCode: 'S7' },
+            duration: 'PT4H50M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '397.57',
+      base: '282.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '397.57',
+      additionalServices: [ { amount: '84.93', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'S7' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '397.57', base: '282.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'TBSOW',
+            brandedFare: 'YBASIC',
+            class: 'T',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'WBSOW',
+            brandedFare: 'YBASIC',
+            class: 'W',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

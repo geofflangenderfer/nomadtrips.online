@@ -1,0 +1,95 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT38H5M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'PEK',
+              terminal: '3',
+              at: '2020-12-10T22:10:00'
+            },
+            arrival: {
+              iataCode: 'CTU',
+              terminal: '1',
+              at: '2020-12-11T01:30:00'
+            },
+            carrierCode: '3U',
+            number: '8894',
+            aircraft: { code: '32A' },
+            operating: { carrierCode: '3U' },
+            duration: 'PT3H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: {
+              iataCode: 'CTU',
+              terminal: '1',
+              at: '2020-12-11T23:55:00'
+            },
+            arrival: {
+              iataCode: 'YVR',
+              terminal: '0',
+              at: '2020-12-11T20:15:00'
+            },
+            carrierCode: '3U',
+            number: '8501',
+            aircraft: { code: '332' },
+            operating: { carrierCode: '3U' },
+            duration: 'PT12H20M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '346.05',
+      base: '168.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '346.05'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: true },
+    validatingAirlineCodes: [ '3U' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '346.05', base: '168.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'RTC',
+            class: 'B',
+            includedCheckedBags: { quantity: 2 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'RTC',
+            class: 'R',
+            includedCheckedBags: { quantity: 2 }
+          }
+        ]
+      }
+    ]
+  }
+]

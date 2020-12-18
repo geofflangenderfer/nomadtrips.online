@@ -1,0 +1,86 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT24H',
+        segments: [
+          {
+            departure: {
+              iataCode: 'LHR',
+              terminal: '2',
+              at: '2020-12-10T10:25:00'
+            },
+            arrival: { iataCode: 'WAW', at: '2020-12-10T13:55:00' },
+            carrierCode: 'LO',
+            number: '282',
+            aircraft: { code: '738' },
+            operating: { carrierCode: 'LO' },
+            duration: 'PT2H30M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'WAW', at: '2020-12-11T09:45:00' },
+            arrival: { iataCode: 'ZAG', at: '2020-12-11T11:25:00' },
+            carrierCode: 'LO',
+            number: '611',
+            aircraft: { code: 'E70' },
+            operating: { carrierCode: 'LO' },
+            duration: 'PT1H40M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '180.95',
+      base: '95.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '180.95',
+      additionalServices: [ { amount: '30.33', type: 'CHECKED_BAGS' } ]
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'LO' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '180.95', base: '95.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'S1SAV0',
+            brandedFare: 'ECOSAVER',
+            class: 'S',
+            includedCheckedBags: { quantity: 0 }
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'S1SAV0',
+            brandedFare: 'ECOSAVER',
+            class: 'S',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]

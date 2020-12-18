@@ -1,0 +1,85 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 4,
+    itineraries: [
+      {
+        duration: 'PT9H6M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'IAH',
+              terminal: 'A',
+              at: '2020-12-10T06:00:00'
+            },
+            arrival: { iataCode: 'MCO', at: '2020-12-10T09:20:00' },
+            carrierCode: 'NK',
+            number: '1262',
+            aircraft: { code: '32A' },
+            operating: { carrierCode: 'NK' },
+            duration: 'PT2H20M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          },
+          {
+            departure: { iataCode: 'MCO', at: '2020-12-10T13:10:00' },
+            arrival: {
+              iataCode: 'BOS',
+              terminal: 'B',
+              at: '2020-12-10T16:06:00'
+            },
+            carrierCode: 'NK',
+            number: '227',
+            aircraft: { code: '32A' },
+            operating: { carrierCode: 'NK' },
+            duration: 'PT2H56M',
+            id: '2',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '211.58',
+      base: '196.98',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '211.58'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'NK' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '211.58', base: '196.98' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'RNR',
+            class: 'R'
+          },
+          {
+            segmentId: '2',
+            cabin: 'ECONOMY',
+            fareBasis: 'R0XSNR',
+            class: 'R'
+          }
+        ]
+      }
+    ]
+  }
+]

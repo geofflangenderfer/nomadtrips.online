@@ -1,0 +1,69 @@
+[
+  {
+    type: 'flight-offer',
+    id: '1',
+    source: 'GDS',
+    instantTicketingRequired: false,
+    nonHomogeneous: false,
+    oneWay: false,
+    lastTicketingDate: '2020-12-10',
+    numberOfBookableSeats: 9,
+    itineraries: [
+      {
+        duration: 'PT2H10M',
+        segments: [
+          {
+            departure: {
+              iataCode: 'ORD',
+              terminal: '1',
+              at: '2020-12-10T06:00:00'
+            },
+            arrival: {
+              iataCode: 'BOS',
+              terminal: 'B',
+              at: '2020-12-10T09:10:00'
+            },
+            carrierCode: 'UA',
+            number: '249',
+            aircraft: { code: '320' },
+            operating: { carrierCode: 'UA' },
+            duration: 'PT2H10M',
+            id: '1',
+            numberOfStops: 0,
+            blacklistedInEU: false
+          }
+        ]
+      }
+    ],
+    price: {
+      currency: 'USD',
+      total: '48.10',
+      base: '38.00',
+      fees: [
+        { amount: '0.00', type: 'SUPPLIER' },
+        { amount: '0.00', type: 'TICKETING' }
+      ],
+      grandTotal: '48.10'
+    },
+    pricingOptions: { fareType: [ 'PUBLISHED' ], includedCheckedBagsOnly: false },
+    validatingAirlineCodes: [ 'UA' ],
+    travelerPricings: [
+      {
+        travelerId: '1',
+        fareOption: 'STANDARD',
+        travelerType: 'ADULT',
+        price: { currency: 'USD', total: '48.10', base: '38.00' },
+        fareDetailsBySegment: [
+          {
+            segmentId: '1',
+            cabin: 'ECONOMY',
+            fareBasis: 'GAA0AKES',
+            brandedFare: 'ECONOMY',
+            class: 'G',
+            includedCheckedBags: { quantity: 0 }
+          }
+        ]
+      }
+    ]
+  }
+]
