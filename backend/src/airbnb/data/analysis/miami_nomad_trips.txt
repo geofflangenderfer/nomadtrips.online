@@ -1,0 +1,14 @@
+		      origin: Miami
+ destination | flight_duration | flight_and_airbnb_price 
+-------------+-----------------+-------------------------
+ MEX         |              16 |                     349
+ CUN         |               8 |                     396
+ PWM         |               5 |                     421
+ MDE         |               3 |                     451
+ LIM         |               8 |                     629
+ BCN         |              11 |                     646
+ LIS         |              11 |                     658
+ EZE         |              12 |                     674
+ LED         |              35 |                     685
+ OPO         |              16 |                     686
+

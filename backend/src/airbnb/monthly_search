@@ -60,6 +60,8 @@ fs.readFile(nomadListJson, function read(err, data) {
 function getCostForLocal(content) {
   for (city of content.cities) {
     if (city.short_slug === input_city) {
+      console.log(`low end ${city.cost_for_local_in_usd*.3}`)
+      console.log(`high end ${city.cost_for_local_in_usd*.8}`)
       return city.cost_for_local_in_usd
     }
   }
