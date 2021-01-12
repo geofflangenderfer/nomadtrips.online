@@ -21,9 +21,9 @@ const fs = require('fs')
 //})()
 // email auth
 let airbnb = new AirBnbClient({
-    email: 'geoff.langenderfer@gmail.com',
-    password: 'w0rdp@ss',
-    session_path: '/home/geofflangenderfer/work/nomadtrips.online/backend',
+    email: '',
+    password: '',
+    session_path: '',
 });
 // must be run first time only
 //(async() => {
